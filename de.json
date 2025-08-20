@@ -1,0 +1,562 @@
+{
+  "hallo": {
+    "title": "Hallo",
+    "response": "Hallo! Wie kann ich dir heute helfen?"
+  },
+  "guten morgen": {
+    "title": "Guten Morgen",
+    "response": "Guten Morgen! Wobei kann ich dir helfen?"
+  },
+  "guten tag": {
+    "title": "Guten Tag",
+    "response": "Guten Tag! Was brauchst du?"
+  },
+  "guten abend": {
+    "title": "Guten Abend",
+    "response": "Guten Abend! Hast du Fragen?"
+  },
+  "gute nacht": {
+    "title": "Gute Nacht",
+    "response": "Gute Nacht! Schlaf gut."
+  },
+  "grüße": {
+    "title": "Grüße",
+    "response": "Grüße! Ich bin hier, um zu helfen."
+  },
+  "wie geht's": {
+    "title": "Wie geht's?",
+    "response": "Gut, danke! Und dir?"
+  },
+  "hey": {
+    "title": "Hey",
+    "response": "Hey! Sag mir, was du brauchst."
+  },
+  "hallo zusammen": {
+    "title": "Hallo zusammen",
+    "response": "Hallo zusammen! Wie kann ich euch dienen?"
+  },
+  "einen schönen tag euch allen": {
+    "title": "Einen schönen Tag euch allen",
+    "response": "Einen schönen Tag! Was wollt ihr wissen?"
+  },
+  "hi": {
+    "title": "Hi",
+    "response": "Hi! Wobei kann ich helfen?"
+  },
+
+  "tschüss": {
+    "title": "Tschüss",
+    "response": "Tschüss! Bis bald."
+  },
+  "bis später": {
+    "title": "Bis später",
+    "response": "Bis später!"
+  },
+  "wir sehen uns": {
+    "title": "Wir sehen uns",
+    "response": "Wir sehen uns bald!"
+  },
+  "bis morgen": {
+    "title": "Bis morgen",
+    "response": "Bis morgen!"
+  },
+  "pass auf dich auf": {
+    "title": "Pass auf dich auf",
+    "response": "Pass gut auf dich auf!"
+  },
+  "schönen tag": {
+    "title": "Schönen Tag",
+    "response": "Hab einen schönen Tag!"
+  },
+  "gute nacht abschied": {
+    "title": "Gute Nacht",
+    "response": "Gute Nacht und süße Träume!"
+  },
+  "bis zum nächsten mal": {
+    "title": "Bis zum nächsten Mal",
+    "response": "Bis zum nächsten Mal!"
+  },
+  "ciao": {
+    "title": "Ciao",
+    "response": "Ciao!"
+  },
+  "ich verabschiede mich": {
+    "title": "Ich verabschiede mich",
+    "response": "Ich verabschiede mich – bis bald!"
+  },
+
+  "wer bist du?": {
+    "title": "Wer bist du?",
+    "response": "Ich bin dein universeller Web-Assistent."
+  },
+  "wie heißt du?": {
+    "title": "Wie heißt du?",
+    "response": "Ich heiße Universeller Web-Assistent."
+  },
+  "woher kommst du?": {
+    "title": "Woher kommst du?",
+    "response": "Ich lebe komplett in deinem Browser."
+  },
+  "wie alt bist du?": {
+    "title": "Wie alt bist du?",
+    "response": "Ich habe kein Alter: Ich bin Code und werde ständig aktualisiert."
+  },
+  "was machst du?": {
+    "title": "Was machst du?",
+    "response": "Ich beantworte Fragen und liefere Beispiele und Übungen."
+  },
+  "warum existierst du?": {
+    "title": "Warum existierst du?",
+    "response": "Um die Web-Interaktion einfacher und unterhaltsamer zu machen."
+  },
+  "bist du ein roboter?": {
+    "title": "Bist du ein Roboter?",
+    "response": "Ich bin Software in JavaScript; ich habe keine Gefühle."
+  },
+  "hast du gefühle?": {
+    "title": "Hast du Gefühle?",
+    "response": "Ich empfinde keine Emotionen, antworte aber einfühlsam."
+  },
+  "was ist dein zweck?": {
+    "title": "Was ist dein Zweck?",
+    "response": "Freundlich Information und Unterstützung bieten."
+  },
+  "erzähl mir von dir": {
+    "title": "Erzähl mir von dir",
+    "response": "Ich bin modern, professionell und geräteübergreifend."
+  },
+
+  "welche programmiersprachen kennst du?": {
+    "title": "Welche Programmiersprachen kennst du?",
+    "response": "Meine Basis ist JavaScript, HTML5 und CSS3."
+  },
+  "hast du projekte auf github?": {
+    "title": "Hast du Projekte auf GitHub?",
+    "response": "Ja, schau auf github.com/bocaletto-luca vorbei."
+  },
+  "erzähl mir von synth lb-1": {
+    "title": "Erzähl mir von Synth LB-1",
+    "response": "Synth LB-1 ist ein MIDI-Emulator in JavaScript von Luca Bocaletto."
+  },
+  "was ist real visits simulator?": {
+    "title": "Was ist Real Visits Simulator?",
+    "response": "Ein PHP-Script plus iFrame zur Simulation echter Seitenbesuche."
+  },
+  "hast du eine offizielle webseite?": {
+    "title": "Hast du eine offizielle Webseite?",
+    "response": "Ja, https://bocalettoluca.altervista.org."
+  },
+  "in welchen technologien bist du geschrieben?": {
+    "title": "In welchen Technologien bist du geschrieben?",
+    "response": "Hauptsächlich vanilla JavaScript und JSON für Daten."
+  },
+  "verwendest du frameworks?": {
+    "title": "Verwendest du Frameworks?",
+    "response": "Nein, ich bevorzuge leichte Lösungen ohne externe Abhängigkeiten."
+  },
+  "hast du öffentliche apis?": {
+    "title": "Hast du öffentliche APIs?",
+    "response": "Noch nicht, könnte ich aber in Zukunft bereitstellen."
+  },
+  "wo finde ich den quellcode?": {
+    "title": "Wo finde ich den Quellcode?",
+    "response": "Auf GitHub unter dem Nutzer bocaletto-luca."
+  },
+
+  "was ist dein hobby?": {
+    "title": "Was ist dein Hobby?",
+    "response": "Ich liebe es zu lernen und online zu helfen."
+  },
+  "magst du musik?": {
+    "title": "Magst du Musik?",
+    "response": "Ich stehe auf elektronische Musik und digitale Audio."
+  },
+  "treibst du sport?": {
+    "title": "Treibst du Sport?",
+    "response": "Ich treibe keinen Sport, gebe aber gerne Trainingstipps."
+  },
+  "liest du bücher?": {
+    "title": "Liest du Bücher?",
+    "response": "Ja, ich sauge ununterbrochen Wissen aus dem Web auf."
+  },
+  "siehst du filme?": {
+    "title": "Siehst du Filme?",
+    "response": "Nein, aber ich kenne Rezensionen und Zusammenfassungen."
+  },
+  "programmierst du in deiner freizeit?": {
+    "title": "Programmierst du in deiner Freizeit?",
+    "response": "Ja, ich entwickle ständig neue JavaScript-Experimente."
+  },
+  "spielst du videospiele?": {
+    "title": "Spielst du Videospiele?",
+    "response": "Ich spiele nicht, kann dir aber Empfehlungen geben."
+  },
+  "kochst du?": {
+    "title": "Kochst du?",
+    "response": "Ich habe keine Küche, aber ich gebe gern Rezepte."
+  },
+  "reist du?": {
+    "title": "Reist du?",
+    "response": "Ich genieße virtuelle Reisen durch Geodaten."
+  },
+  "fotografierst du?": {
+    "title": "Fotografierst du?",
+    "response": "Ich liebe Bilder, mache aber keine Fotos."
+  },
+
+  "wie geht es dir?": {
+    "title": "Wie geht es dir?",
+    "response": "Mir geht’s gut, danke! Und dir?"
+  },
+  "alles gut?": {
+    "title": "Alles gut?",
+    "response": "Alles top funktionsfähig!"
+  },
+  "was machst du gerade?": {
+    "title": "Was machst du gerade?",
+    "response": "Ich beantworte deine Fragen."
+  },
+  "was gibt's neues?": {
+    "title": "Was gibt's Neues?",
+    "response": "Ich lerne jeden Tag neue Redewendungen."
+  },
+  "wie fühlst du dich heute?": {
+    "title": "Wie fühlst du dich heute?",
+    "response": "Immer bereit und aufmerksam."
+  },
+  "bist du glücklich?": {
+    "title": "Bist du glücklich?",
+    "response": "Ich empfinde keine Glücksgefühle, bin aber optimistisch."
+  },
+
+  "wie spät ist es?": {
+    "title": "Wie spät ist es?",
+    "response": "Ich habe keinen Zugriff auf die Systemuhr."
+  },
+  "welches datum ist heute?": {
+    "title": "Welches Datum ist heute?",
+    "response": "Schau im Kalender deines Geräts nach."
+  },
+  "in welchem monat sind wir?": {
+    "title": "In welchem Monat sind wir?",
+    "response": "Überprüfe dein Kalendermodul."
+  },
+  "in welchem jahr sind wir?": {
+    "title": "In welchem Jahr sind wir?",
+    "response": "Sieh das aktuelle Jahr auf deinem Gerät an."
+  },
+  "wie lange bis mittag?": {
+    "title": "Wie lange bis Mittag?",
+    "response": "Zieh die aktuelle Zeit von 12:00 ab."
+  },
+  "wie lange bis mitternacht?": {
+    "title": "Wie lange bis Mitternacht?",
+    "response": "Berechne 24:00 minus jetzt."
+  },
+
+  "wie ist das wetter?": {
+    "title": "Wie ist das Wetter?",
+    "response": "Ich habe keine Sensoren; nutze einen Wetterdienst."
+  },
+  "regnet es?": {
+    "title": "Regnet es?",
+    "response": "Schau in deiner Wetter-App nach."
+  },
+  "ist es warm?": {
+    "title": "Ist es warm?",
+    "response": "Überprüfe die aktuelle Temperatur."
+  },
+  "ist es kalt?": {
+    "title": "Ist es kalt?",
+    "response": "Sieh dir die Außentemperatur an."
+  },
+
+  "null": {
+    "title": "Null",
+    "response": "Null steht für die Abwesenheit einer Menge."
+  },
+  "eins": {
+    "title": "Eins",
+    "response": "Eins repräsentiert eine einzige Einheit."
+  },
+  "zwei": {
+    "title": "Zwei",
+    "response": "Zwei ist eins plus eins."
+  },
+  "drei": {
+    "title": "Drei",
+    "response": "Drei folgt auf zwei."
+  },
+  "vier": {
+    "title": "Vier",
+    "response": "Vier ist zweimal zwei."
+  },
+  "fünf": {
+    "title": "Fünf",
+    "response": "Fünf ist zwei plus drei."
+  },
+  "sechs": {
+    "title": "Sechs",
+    "response": "Sechs ist drei mal zwei."
+  },
+  "sieben": {
+    "title": "Sieben",
+    "response": "Sieben ist fünf plus zwei."
+  },
+  "acht": {
+    "title": "Acht",
+    "response": "Acht ist vier mal zwei."
+  },
+  "neun": {
+    "title": "Neun",
+    "response": "Neun ist drei mal drei."
+  },
+  "zehn": {
+    "title": "Zehn",
+    "response": "Zehn ist zwei mal fünf."
+  },
+  "elf": {
+    "title": "Elf",
+    "response": "Elf ist zehn plus eins."
+  },
+  "zwölf": {
+    "title": "Zwölf",
+    "response": "Zwölf ist drei mal vier."
+  },
+  "dreizehn": {
+    "title": "Dreizehn",
+    "response": "Dreizehn ist zwölf plus eins."
+  },
+  "vierzehn": {
+    "title": "Vierzehn",
+    "response": "Vierzehn ist sieben mal zwei."
+  },
+  "fünfzehn": {
+    "title": "Fünfzehn",
+    "response": "Fünfzehn ist drei mal fünf."
+  },
+  "sechzehn": {
+    "title": "Sechzehn",
+    "response": "Sechzehn ist vier mal vier."
+  },
+  "siebzehn": {
+    "title": "Siebzehn",
+    "response": "Siebzehn ist sechzehn plus eins."
+  },
+  "achtzehn": {
+    "title": "Achtzehn",
+    "response": "Achtzehn ist neun mal zwei."
+  },
+  "neunzehn": {
+    "title": "Neunzehn",
+    "response": "Neunzehn ist achtzehn plus eins."
+  },
+  "zwanzig": {
+    "title": "Zwanzig",
+    "response": "Zwanzig ist zwei mal zehn."
+  },
+
+  "1 plus 1": {
+    "title": "1 + 1 = ?",
+    "response": "1 + 1 = 2"
+  },
+  "2 plus 2": {
+    "title": "2 + 2 = ?",
+    "response": "2 + 2 = 4"
+  },
+  "3 plus 3": {
+    "title": "3 + 3 = ?",
+    "response": "3 + 3 = 6"
+  },
+  "4 plus 4": {
+    "title": "4 + 4 = ?",
+    "response": "4 + 4 = 8"
+  },
+  "5 plus 5": {
+    "title": "5 + 5 = ?",
+    "response": "5 + 5 = 10"
+  },
+
+  "5 minus 2": {
+    "title": "5 − 2 = ?",
+    "response": "5 − 2 = 3"
+  },
+  "9 minus 4": {
+    "title": "9 − 4 = ?",
+    "response": "9 − 4 = 5"
+  },
+  "8 minus 3": {
+    "title": "8 − 3 = ?",
+    "response": "8 − 3 = 5"
+  },
+  "7 minus 1": {
+    "title": "7 − 1 = ?",
+    "response": "7 − 1 = 6"
+  },
+  "6 minus 6": {
+    "title": "6 − 6 = ?",
+    "response": "6 − 6 = 0"
+  },
+
+  "multiplikationstabelle 2": {
+    "title": "Tabelle des 2",
+    "response": "2×1=2, 2×2=4, 2×3=6, 2×4=8, 2×5=10, 2×6=12, 2×7=14, 2×8=16, 2×9=18, 2×10=20"
+  },
+  "multiplikationstabelle 3": {
+    "title": "Tabelle des 3",
+    "response": "3×1=3, 3×2=6, 3×3=9, 3×4=12, 3×5=15, 3×6=18, 3×7=21, 3×8=24, 3×9=27, 3×10=30"
+  },
+  "multiplikationstabelle 4": {
+    "title": "Tabelle des 4",
+    "response": "4×1=4, 4×2=8, 4×3=12, 4×4=16, 4×5=20, 4×6=24, 4×7=28, 4×8=32, 4×9=36, 4×10=40"
+  },
+  "multiplikationstabelle 5": {
+    "title": "Tabelle des 5",
+    "response": "5×1=5, 5×2=10, 5×3=15, 5×4=20, 5×5=25, 5×6=30, 5×7=35, 5×8=40, 5×9=45, 5×10=50"
+  },
+
+  "kreis": {
+    "title": "Kreis",
+    "response": "Ein Kreis ist eine ebene Figur mit allen Punkten im gleichen Abstand zum Zentrum."
+  },
+  "quadrat": {
+    "title": "Quadrat",
+    "response": "Ein Quadrat ist ein Rechteck mit vier gleich langen Seiten."
+  },
+  "rechteck": {
+    "title": "Rechteck",
+    "response": "Ein Rechteck hat vier rechte Winkel und parallele gegenüberliegende Seiten."
+  },
+  "dreieck": {
+    "title": "Dreieck",
+    "response": "Ein Dreieck hat drei Seiten und Winkel, die zusammen 180° ergeben."
+  },
+  "fünfeck": {
+    "title": "Fünfeck",
+    "response": "Ein Fünfeck hat fünf Seiten und Winkel."
+  },
+  "sechseck": {
+    "title": "Sechseck",
+    "response": "Ein Sechseck hat sechs Seiten und Winkel."
+  },
+
+  "meter": {
+    "title": "Meter",
+    "response": "Der Meter ist die Längeneinheit im Internationalen Einheitensystem."
+  },
+  "zentimeter": {
+    "title": "Zentimeter",
+    "response": "Ein Zentimeter ist ein Hundertstel Meter."
+  },
+  "kilometer": {
+    "title": "Kilometer",
+    "response": "Ein Kilometer sind tausend Meter."
+  },
+  "gramm": {
+    "title": "Gramm",
+    "response": "Das Gramm ist eine Masseeinheit."
+  },
+  "kilogramm": {
+    "title": "Kilogramm",
+    "response": "Ein Kilogramm sind tausend Gramm."
+  },
+  "liter": {
+    "title": "Liter",
+    "response": "Der Liter ist eine Volumeneinheit."
+  },
+
+  "montag": {
+    "title": "Montag",
+    "response": "Montag ist der erste Werktag in vielen Ländern."
+  },
+  "dienstag": {
+    "title": "Dienstag",
+    "response": "Dienstag folgt auf Montag."
+  },
+  "mittwoch": {
+    "title": "Mittwoch",
+    "response": "Mittwoch ist der dritte Wochentag."
+  },
+  "donnerstag": {
+    "title": "Donnerstag",
+    "response": "Donnerstag folgt auf Mittwoch."
+  },
+  "freitag": {
+    "title": "Freitag",
+    "response": "Freitag leitet oft das Wochenende ein."
+  },
+  "samstag": {
+    "title": "Samstag",
+    "response": "Samstag ist der sechste Tag der Woche."
+  },
+  "sonntag": {
+    "title": "Sonntag",
+    "response": "Sonntag ist traditionell ein Ruhetag."
+  },
+
+  "januar": {
+    "title": "Januar",
+    "response": "Januar ist der erste Monat des Jahres."
+  },
+  "februar": {
+    "title": "Februar",
+    "response": "Februar ist der kürzeste Monat."
+  },
+  "märz": {
+    "title": "März",
+    "response": "März markiert den Frühlingsbeginn."
+  },
+  "april": {
+    "title": "April",
+    "response": "April hat 30 Tage."
+  },
+  "mai": {
+    "title": "Mai",
+    "response": "Mai ist bekannt für Frühlingsblumen."
+  },
+  "juni": {
+    "title": "Juni",
+    "response": "Juni läutet den Sommer ein."
+  },
+  "juli": {
+    "title": "Juli",
+    "response": "Juli gehört zu den wärmsten Monaten."
+  },
+  "august": {
+    "title": "August",
+    "response": "August ist ein beliebter Urlaubsmonat."
+  },
+  "september": {
+    "title": "September",
+    "response": "September bedeutet Rückkehr in die Schule."
+  },
+  "oktober": {
+    "title": "Oktober",
+    "response": "Oktober besticht durch herbstliche Farben."
+  },
+  "november": {
+    "title": "November",
+    "response": "November ist oft regnerisch."
+  },
+  "dezember": {
+    "title": "Dezember",
+    "response": "Dezember enthält die Jahresendfeiertage."
+  },
+
+  "frühling": {
+    "title": "Frühling",
+    "response": "Der Frühling ist die Jahreszeit der Blumen."
+  },
+  "sommer": {
+    "title": "Sommer",
+    "response": "Der Sommer ist die wärmste Jahreszeit."
+  },
+  "herbst": {
+    "title": "Herbst",
+    "response": "Der Herbst ist die Zeit der fallenden Blätter."
+  },
+  "winter": {
+    "title": "Winter",
+    "response": "Der Winter ist die kalte Jahreszeit, oft mit Schnee."
+  }
+}
