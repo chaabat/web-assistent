@@ -1,6 +1,6 @@
 # web-assistent
 
-A modern, single‑page, multi‑device web assistant for the Italian primary school mathematics curriculum. Built with semantic HTML5, responsive CSS, and vanilla JavaScript, it delivers clear explanations, step‑by‑step solutions, and auto‑generated practice exercises powered by JSON datasets organized by grade (prima → quinta).
+A modern, multi‑device web assistant for the Italian primary school mathematics curriculum. Built with semantic HTML5, responsive CSS, and vanilla JavaScript, it delivers clear explanations, step‑by‑step solutions, and auto‑generated practice exercises powered by JSON datasets organized by grade (prima → quinta).
 
 ---
 
