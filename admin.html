@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Universal Web Assistant — Admin</title>
+  <meta name="description" content="Admin panel for editing the Universal Web Assistant phrase libraries (EN/IT).">
+  
+  <!-- Open Graph (English only) -->
+  <meta property="og:title" content="Universal Web Assistant — Admin">
+  <meta property="og:description" content="Admin panel for editing the Universal Web Assistant phrase libraries (EN/IT).">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://your-domain.com/admin.html">
+  <meta property="og:site_name" content="web-assistent">
+  <meta property="og:locale" content="en_US">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Universal Web Assistant — Admin">
+  <meta name="twitter:description" content="Admin panel for editing the Universal Web Assistant phrase libraries (EN/IT).">
+
+  <style>
+    /* Reset & Base */
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { font-family: 'Segoe UI', sans-serif; font-size:16px; line-height:1.5; }
+    body { background:#f9f9f9; color:#222; display:flex; flex-direction:column; min-height:100vh; }
+
+    /* Containers */
+    header, footer { background:#0066cc; color:#fff; }
+    .container { max-width:900px; margin:0 auto; padding:1rem; width:100%; }
+
+    /* Header */
+    header { display:flex; align-items:center; justify-content:space-between; }
+    header h1 { font-size:1.25rem; }
+    #langToggle {
+      background:transparent; border:2px solid #fff; color:#fff;
+      padding:0.25em 0.75em; font-size:0.9rem; border-radius:4px; cursor:pointer;
+    }
+
+    /* Main */
+    main { flex:1; padding:1rem 0; }
+    .panel { background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1); padding:1rem; }
+    .controls { display:flex; flex-wrap:wrap; gap:1rem; margin-bottom:1rem; }
+    .controls label { display:flex; flex-direction:column; font-weight:600; }
+    .controls select, .controls input[type="file"] { margin-top:0.25rem; }
+
+    /* Table */
+    table { width:100%; border-collapse:collapse; margin-bottom:1rem; }
+    th, td { border:1px solid #ddd; padding:0.5rem; text-align:left; vertical-align:top; }
+    th { background:#f0f0f0; }
+    td.actions button { margin-right:0.5rem; }
+    td.actions button:last-child { margin-right:0; }
+
+    /* Add Form */
+    .add-form { display:flex; flex-wrap:wrap; gap:1rem; margin-bottom:1rem; }
+    .add-form input, .add-form textarea {
+      flex:1; padding:0.5rem; border:1px solid #ccc; border-radius:4px;
+    }
+    .add-form textarea { resize:vertical; }
+
+    /* Buttons */
+    button {
+      background:#0066cc; color:#fff; border:none; padding:0.5rem 1rem;
+      border-radius:4px; cursor:pointer; font-size:0.9rem;
+    }
+    button.danger { background:#cc3300; }
+    button:disabled { opacity:0.6; cursor:not-allowed; }
+
+    /* Footer */
+    footer { text-align:center; padding:0.75rem 0; font-size:0.9rem; }
+
+    /* Responsive */
+    @media (max-width:600px) {
+      .controls, .add-form { flex-direction:column; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 id="adminTitle">Assistant Admin Panel</h1>
+      <button id="langToggle">IT</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="panel">
+      <!-- File Controls -->
+      <div class="controls">
+        <label id="selectLabel">
+          Select file
+          <select id="fileSelect">
+            <option value="en.json">en.json</option>
+            <option value="it.json">it.json</option>
+          </select>
+        </label>
+        <button id="loadBtn">Load</button>
+
+        <label id="uploadLabel">
+          Or upload JSON
+          <input type="file" id="fileInput" accept=".json">
+        </label>
+      </div>
+
+      <!-- Entries Table -->
+      <table aria-label="Phrases table">
+        <thead>
+          <tr>
+            <th id="colKey">Key</th>
+            <th id="colTitle">Title</th>
+            <th id="colResp">Response</th>
+            <th id="colActions">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <!-- Dynamically injected rows -->
+        </tbody>
+      </table>
+
+      <!-- Add New Entry -->
+      <form id="addForm" class="add-form">
+        <input type="text" id="newKey" placeholder="Key" required>
+        <input type="text" id="newTitle" placeholder="Title" required>
+        <textarea id="newResp" rows="2" placeholder="Response" required></textarea>
+        <button type="submit" id="addBtn">Add Entry</button>
+      </form>
+
+      <!-- Save -->
+      <button id="saveBtn">Save JSON</button>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2023 Bocaletto Luca • <a href="https://github.com/bocaletto-luca/web-assistent" target="_blank">GitHub</a> • MIT License
+    </div>
+  </footer>
+
+  <script>
+    // i18n dictionaries
+    const DICTS = {
+      en: {
+        adminTitle: 'Assistant Admin Panel',
+        selectLabel: 'Select file',
+        loadBtn: 'Load',
+        uploadLabel: 'Or upload JSON',
+        colKey: 'Key',
+        colTitle: 'Title',
+        colResp: 'Response',
+        colActions: 'Actions',
+        editBtn: 'Edit',
+        delBtn: 'Delete',
+        addBtn: 'Add Entry',
+        saveBtn: 'Save JSON',
+        fallback: 'Entry not found.',
+        toggleLabel: 'IT'
+      },
+      it: {
+        adminTitle: 'Pannello di Amministrazione',
+        selectLabel: 'Seleziona file',
+        loadBtn: 'Carica',
+        uploadLabel: 'Oppure carica JSON',
+        colKey: 'Chiave',
+        colTitle: 'Titolo',
+        colResp: 'Risposta',
+        colActions: 'Azioni',
+        editBtn: 'Modifica',
+        delBtn: 'Elimina',
+        addBtn: 'Aggiungi Voce',
+        saveBtn: 'Salva JSON',
+        fallback: 'Voce non trovata.',
+        toggleLabel: 'EN'
+      }
+    };
+
+    let locale = 'en';
+    let currentFile = 'en.json';
+    let jsonData = {};
+
+    // DOM refs
+    const langToggle = document.getElementById('langToggle');
+    const adminTitle = document.getElementById('adminTitle');
+    const fileSelect  = document.getElementById('fileSelect');
+    const loadBtn     = document.getElementById('loadBtn');
+    const fileInput   = document.getElementById('fileInput');
+    const tableBody   = document.getElementById('tableBody');
+    const addForm     = document.getElementById('addForm');
+    const newKey      = document.getElementById('newKey');
+    const newTitle    = document.getElementById('newTitle');
+    const newResp     = document.getElementById('newResp');
+    const saveBtn     = document.getElementById('saveBtn');
+
+    // Apply translations
+    function translateUI() {
+      const d = DICTS[locale];
+      adminTitle.textContent         = d.adminTitle;
+      document.getElementById('selectLabel').firstChild.textContent = d.selectLabel + ' ';
+      loadBtn.textContent            = d.loadBtn;
+      document.getElementById('uploadLabel').firstChild.textContent = d.uploadLabel + ' ';
+      document.getElementById('colKey').textContent   = d.colKey;
+      document.getElementById('colTitle').textContent = d.colTitle;
+      document.getElementById('colResp').textContent  = d.colResp;
+      document.getElementById('colActions').textContent = d.colActions;
+      addForm.querySelector('#addBtn').textContent = d.addBtn;
+      saveBtn.textContent           = d.saveBtn;
+      langToggle.textContent        = d.toggleLabel;
+    }
+
+    // Toggle language
+    langToggle.addEventListener('click', () => {
+      locale = locale === 'en' ? 'it' : 'en';
+      document.documentElement.lang = locale;
+      translateUI();
+      renderTable();
+    });
+
+    // Load JSON via fetch
+    async function loadJSON(name) {
+      try {
+        const res = await fetch(name + '?_=' + Date.now());
+        jsonData = await res.json();
+        currentFile = name;
+        renderTable();
+      } catch (e) {
+        alert('Failed to load ' + name);
+      }
+    }
+
+    loadBtn.addEventListener('click', () => {
+      loadJSON(fileSelect.value);
+    });
+
+    // Load JSON via file upload
+    fileInput.addEventListener('change', e => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        try {
+          jsonData = JSON.parse(reader.result);
+          currentFile = file.name;
+          renderTable();
+        } catch {
+          alert('Invalid JSON file.');
+        }
+      };
+      reader.readAsText(file);
+    });
+
+    // Render table rows
+    function renderTable() {
+      tableBody.innerHTML = '';
+      const keys = Object.keys(jsonData);
+      if (!keys.length) return;
+      keys.forEach(key => {
+        const row = document.createElement('tr');
+        // Key cell
+        const tdKey = document.createElement('td');
+        tdKey.textContent = key;
+        row.append(tdKey);
+        // Title
+        const tdTitle = document.createElement('td');
+        const inpTitle = document.createElement('input');
+        inpTitle.value = jsonData[key].title;
+        tdTitle.append(inpTitle);
+        row.append(tdTitle);
+        // Response
+        const tdResp = document.createElement('td');
+        const inpResp = document.createElement('textarea');
+        inpResp.rows = 2;
+        inpResp.value = jsonData[key].response;
+        tdResp.append(inpResp);
+        row.append(tdResp);
+        // Actions
+        const tdAct = document.createElement('td');
+        tdAct.className = 'actions';
+        const editBtn = document.createElement('button');
+        editBtn.textContent = DICTS[locale].editBtn;
+        editBtn.addEventListener('click', () => {
+          const t = inpTitle.value.trim();
+          const r = inpResp.value.trim();
+          if (!t || !r) return alert('Empty fields');
+          jsonData[key] = { title: t, response: r };
+        });
+        const delBtn = document.createElement('button');
+        delBtn.className = 'danger';
+        delBtn.textContent = DICTS[locale].delBtn;
+        delBtn.addEventListener('click', () => {
+          delete jsonData[key];
+          renderTable();
+        });
+        tdAct.append(editBtn, delBtn);
+        row.append(tdAct);
+        tableBody.append(row);
+      });
+    }
+
+    // Add new entry
+    addForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const k = newKey.value.trim().toLowerCase();
+      const t = newTitle.value.trim();
+      const r = newResp.value.trim();
+      if (!k || !t || !r) return alert('All fields required');
+      if (jsonData[k]) return alert('Key exists');
+      jsonData[k] = { title: t, response: r };
+      newKey.value = '';
+      newTitle.value = '';
+      newResp.value = '';
+      renderTable();
+    });
+
+    // Save JSON (download)
+    saveBtn.addEventListener('click', () => {
+      const blob = new Blob(
+        [JSON.stringify(jsonData, null, 2)],
+        { type: 'application/json' }
+      );
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = currentFile;
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+
+    // Init
+    (async () => {
+      document.documentElement.lang = locale;
+      translateUI();
+      await loadJSON(currentFile);
+    })();
+  </script>
+</body>
+</html>
