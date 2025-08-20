@@ -1,126 +1,115 @@
-# web-assistent
+# Web Assistant
 
-A modern, multi‑device web assistant for the Italian primary school mathematics curriculum. Built with semantic HTML5, responsive CSS, and vanilla JavaScript, it delivers clear explanations, step‑by‑step solutions, and auto‑generated practice exercises powered by JSON datasets organized by grade (prima → quinta).
-
----
-
-## Overview
-
-- **Purpose:** Deliver a focused, distraction‑free math companion aligned to the Italian elementary curriculum, starting in Italian and expanding to English next.
-- **Scope:** Full primary program coverage, organized into five JSON files (one per grade). Topics include numbers, operations, problem solving, geometry, measurement, and logic.
-- **Format:** One professional, SEO‑ready index.html with a clean header/footer layout, accessible UI components, and responsive behavior across phones, tablets, and desktops.
-- **Approach:** No frameworks, no build step. Standards‑based, maintainable, and easy to host on any static server or GitHub Pages.
+A self-contained, bilingual web assistant that runs entirely from a single `index.html` file, loading its phrase library from JSON. Includes an `admin.html` tool to manage (create, edit, delete, save) the JSON phrase files. SEO metadata is in English only.
 
 ---
 
-## Key Features
+## Features
 
-- **Single page:** index.html as the core UX surface with a polished header, content panel, and footer.
-- **Responsive UI:** CSS Grid/Flexbox layout for fluid scaling from 320px to wide screens; mobile‑first breakpoints.
-- **Accessibility:** WCAG 2.1 AA‑minded color contrast, keyboard navigation, skip links, landmarks, ARIA labels.
-- **SEO‑ready:** Descriptive metadata, canonical URL, Open Graph/Twitter cards, JSON‑LD schema, sitemap, robots.
-- **Curriculum data:** Five grade‑specific JSON files with explanations, examples, and graded exercises.
-- **Exercise engine:** Deterministic and random exercise generation, inline hints, and solution checking.
-- **Statefulness:** Query parsing, topic routing, progress tracking (in‑memory; optional localStorage).
-- **Dark mode:** Prefers‑color‑scheme integration with a manual toggle for user choice.
-- **Offline‑friendly:** Static assets only; easy to extend to PWA if needed.
-
----
-
-## Core Components
-
-| Component | Purpose | Status | Notes |
-|---|---|---|---|
-| index.html | UI shell, semantic structure, SEO | Planned | Header, main chat/learning pane, footer |
-| /assets/css/styles.css | Responsive layout, themes | Planned | Grid/Flex, dark/light, reduced motion |
-| /assets/js/app.js | Routing, rendering, logic | Planned | Topic search, exercise engine, scoring |
-| /assets/js/i18n.js | Localization utilities | Planned | Italian default; English upcoming |
-| /data/grade-1.json | Prima (Grade 1) data | Planned | Numbers 0–100, add/sub, shapes, time |
-| /data/grade-2.json | Seconda (Grade 2) data | Planned | Larger numbers, tables, money, length |
-| /data/grade-3.json | Terza (Grade 3) data | Planned | Multiplication/division mastery, area |
-| /data/grade-4.json | Quarta (Grade 4) data | Planned | Fractions, multi‑step problems, angles |
-| /data/grade-5.json | Quinta (Grade 5) data | Planned | Decimals, percentages, perimeter/area |
-
-> Sources: Concept structure and scope definition by the repository author.
+- Single-page main interface in `index.html`  
+- Two JSON libraries at the root:  
+  - `en.json` for English phrases  
+  - `it.json` for Italian phrases  
+- Bilingual UI: toggle between English and Italian at runtime  
+- SEO-ready metadata in English only  
+- Admin interface in `admin.html` for live editing of both JSON files  
+- No external dependencies or build step—just HTML, CSS, and vanilla JavaScript  
+- Responsive and mobile-first design  
 
 ---
 
-## UX and Content Standards
+## File Structure
 
-- **Semantic structure:** Header, nav, main, aside, footer, and section/article where appropriate.
-- **Forms and inputs:** Labels, descriptions, error states, and accessible focus order.
-- **Copy style:** Short, student‑friendly explanations; consistent terminology across grades.
-- **Assessment:** Instant feedback, step‑wise solutions, and gentle remediation hints.
-- **Visual design:** Neutral palette, high contrast, spacious line‑height, and iconography with text.
-
----
-
-## SEO and Social Sharing
-
-- **Meta:** Title (<60 chars), description (150–160 chars), canonical URL.
-- **Open Graph:** og:title, og:description, og:type=website, og:image, og:url.
-- **Twitter Cards:** summary_large_image with mirrored OG content.
-- **Structured data:** JSON‑LD (WebSite, Organization, and BreadcrumbList patterns).
-- **Indexing:** robots.txt (allow), sitemap.xml (root pages), clean URLs where applicable.
+| Path          | Description                                                                 |
+|---------------|-----------------------------------------------------------------------------|
+| index.html    | Main assistant interface; loads `en.json` or `it.json` based on locale       |
+| admin.html    | JSON editor for adding, modifying, deleting, and saving phrase entries       |
+| en.json       | English phrase library                                                       |
+| it.json       | Italian phrase library                                                       |
 
 ---
 
-## Performance and Quality
+## Getting Started
 
-- **Budget:** <150KB CSS+JS gzipped on initial load; defer non‑critical scripts.
-- **Assets:** Preload key fonts, use system fonts fallback, optimize and lazy‑load images/illustrations.
-- **CSS/JS:** Minify for production; isolate critical CSS; avoid layout thrashing.
-- **Motion:** Respects prefers‑reduced‑motion; no auto‑playing animations.
+1. Clone the repository  
+   ```
+   git clone https://github.com/bocaletto-luca/web-assistent.git
+   cd web-assistent
+   ```
 
----
+2. Run a simple local server (to allow JSON fetches)  
+   ```
+   python3 -m http.server 8000
+   ```
+   or any static file server of your choice.
 
-## Data Model and Coverage
-
-- **Per‑grade JSON:** Each file groups topics into domains with fields for explanation, examples, generator configs, and solution keys.
-- **Exercise schema:** id, topic, difficulty, prompt, data, steps, solution, hints, distractors (optional).
-- **Localization:** Text nodes separated from logic; i18n keys later mapped to English.
-
----
-
-## Running Locally
-
-- **Static server:** Use any simple HTTP server to avoid CORS when fetching JSON.
-- **Example (Python 3):**
-  - **Command:** 
-    ```
-    python -m http.server 5173
-    ```
-  - **Access:** http://localhost:5173
+3. Open `http://localhost:8000/index.html` for the assistant, or  
+   `http://localhost:8000/admin.html` for the admin editor.
 
 ---
 
-## Roadmap
+## Usage
 
-- **v0.1:** index.html shell, base styles, accessible components, placeholder data.
-- **v0.2:** Routing and topic search; load Grade 1 JSON; exercise engine basics.
-- **v1.0 (Italian):** Full Grades 1–5 JSON coverage; progress tracking; dark mode.
-- **v1.1:** Print/export of practice sets; privacy‑friendly analytics (opt‑in).
-- **v2.0 (English):** Full UI and content localization; parallel JSON datasets.
+- **Switch Language:** Click the language toggle in the header to switch between English and Italian interfaces.  
+- **Ask a Question:** Type your query in the input box and press Send. The assistant looks up the key in the loaded JSON and returns the matching phrase or a default fallback.  
+- **Manage Phrases:** Navigate to `admin.html`, select the target language file (EN or IT), and use the on-page form to add, edit, or remove entries. Click Save to update the JSON file on the server.
+
+---
+
+## Data Model
+
+Each JSON file uses a simple key/value structure:
+
+```json
+{
+  "greeting": {
+    "title": "Hello",
+    "response": "Welcome! How can I assist you today?"
+  },
+  "farewell": {
+    "title": "Goodbye",
+    "response": "See you soon!"
+  }
+}
+```
+
+- **Key:** lookup string (lowercased)  
+- **title:** user-facing prompt or label  
+- **response:** assistant reply  
+
+The admin UI ensures this schema is respected and validates before saving.
+
+---
+
+## SEO and Metadata
+
+`index.html` includes:
+
+- English-only `<meta>` tags for title, description, Open Graph, and Twitter Cards  
+- A JSON-LD script describing the website and author  
+- Canonical URL pointing to the live English-only landing page  
+
+The Italian UI does not expose separate SEO metadata.
 
 ---
 
 ## Contributing
 
-- **Issues:** Bug reports, enhancement requests, and topic coverage gaps are welcome.
-- **Style:** Vanilla HTML/CSS/JS; keep accessibility, performance, and SEO intact.
-- **Data:** Follow the JSON schema; validate before commits; add tests where possible.
-- **Workflow:** Conventional commits and meaningful PR descriptions.
+- Open issues for bugs or feature requests  
+- Submit pull requests against the `main` branch  
+- Follow the existing HTML/CSS/JS style and JSON schema  
+- Include meaningful commit messages  
 
 ---
 
 ## License
 
-- **MIT License:** Open, permissive use with attribution.
+MIT License
 
 ---
 
 ## Author
 
-- **Name:** Bocaletto Luca
-- **GitHub:** https://github.com/bocaletto-luca
-- **Repository:** web-assistent
+Bocaletto Luca  
+GitHub: https://github.com/bocaletto-luca  
+Repository: web-assistent
