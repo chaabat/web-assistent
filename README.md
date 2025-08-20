@@ -1,6 +1,6 @@
 # Web Assistant
 
-A self-contained, bilingual web assistant that runs entirely from a single `index.html` file, loading its phrase library from JSON. Includes an `admin.html` tool to manage (create, edit, delete, save) the JSON phrase files. SEO metadata is in English only.
+A self-contained, bilingual web assistant that runs entirely from a single `index.html` file, loading its phrase library from JSON. Includes an `admin.html` tool to manage (create, edit, delete, save) the JSON phrase files. 
 
 ---
 
