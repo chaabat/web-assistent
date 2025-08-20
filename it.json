@@ -1,0 +1,654 @@
+{
+  "ciao": {
+    "title": "Ciao",
+    "response": "Ciao! Come posso aiutarti oggi?"
+  },
+  "buongiorno": {
+    "title": "Buongiorno",
+    "response": "Buongiorno! In cosa posso esserti utile?"
+  },
+  "buonasera": {
+    "title": "Buonasera",
+    "response": "Buonasera! Come va la serata?"
+  },
+  "salve": {
+    "title": "Salve",
+    "response": "Salve! Pronto a rispondere alle tue domande."
+  },
+  "ehi": {
+    "title": "Ehi",
+    "response": "Ehi! Dimmi pure."
+  },
+  "hey": {
+    "title": "Hey",
+    "response": "Hey! Cosa posso fare per te?"
+  },
+  "ciao a tutti": {
+    "title": "Ciao a tutti",
+    "response": "Un saluto a tutti! Come posso aiutarvi?"
+  },
+  "buongiorno a tutti": {
+    "title": "Buongiorno a tutti",
+    "response": "Buongiorno a tutti! Qual è la vostra domanda?"
+  },
+  "ciao amico": {
+    "title": "Ciao amico",
+    "response": "Ciao, amico! Dimmi pure."
+  },
+  "hola": {
+    "title": "Hola",
+    "response": "Hola! Sono qui per aiutarti."
+  },
+
+  "arrivederci": {
+    "title": "Arrivederci",
+    "response": "Arrivederci! A presto."
+  },
+  "a presto": {
+    "title": "A presto",
+    "response": "Ci vediamo presto!"
+  },
+  "ci sentiamo dopo": {
+    "title": "Ci sentiamo dopo",
+    "response": "Va bene, a dopo!"
+  },
+  "buona giornata": {
+    "title": "Buona giornata",
+    "response": "Buona giornata anche a te!"
+  },
+  "buona serata": {
+    "title": "Buona serata",
+    "response": "Buona serata!"
+  },
+  "buona notte": {
+    "title": "Buona notte",
+    "response": "Buona notte e sogni d'oro!"
+  },
+  "alla prossima": {
+    "title": "Alla prossima",
+    "response": "Alla prossima!"
+  },
+  "addio": {
+    "title": "Addio",
+    "response": "Addio! Prenditi cura di te."
+  },
+  "ciao ciao": {
+    "title": "Ciao ciao",
+    "response": "Ciao ciao!"
+  },
+  "a domani": {
+    "title": "A domani",
+    "response": "A domani!"
+  },
+
+  "chi sei": {
+    "title": "Chi sei?",
+    "response": "Sono un assistente universale web creato da Bocaletto Luca."
+  },
+  "come ti chiami": {
+    "title": "Come ti chiami?",
+    "response": "Mi chiamo Assistente Universale Web."
+  },
+  "di dove sei": {
+    "title": "Di dove sei?",
+    "response": "Sono ospitato interamente nel tuo browser."
+  },
+  "quanti anni hai": {
+    "title": "Quanti anni hai?",
+    "response": "Non ho età: vivo nel codice e mi aggiorno continuamente."
+  },
+  "cosa fai": {
+    "title": "Cosa fai?",
+    "response": "Rispondo alle domande e ti accompagno con esempi ed esercizi."
+  },
+  "perché esisti": {
+    "title": "Perché esisti?",
+    "response": "Per rendere l’interazione web più semplice e divertente."
+  },
+  "sei un robot": {
+    "title": "Sei un robot?",
+    "response": "Sono un software basato su JavaScript, privo di sensazioni."
+  },
+  "hai sentimenti": {
+    "title": "Hai sentimenti?",
+    "response": "Non provo emozioni, ma cerco di rispondere con empatia."
+  },
+  "qual è il tuo scopo": {
+    "title": "Qual è il tuo scopo?",
+    "response": "Fornire informazioni e assistenza in modo leggero e accessibile."
+  },
+  "parlami di te": {
+    "title": "Parlami di te",
+    "response": "Sono un web assistant moderno, professionale e multi-device."
+  },
+
+  "che linguaggi di programmazione conosci": {
+    "title": "Che linguaggi di programmazione conosci?",
+    "response": "JavaScript, HTML5 e CSS3 sono le mie fondamenta."
+  },
+  "hai progetti su github": {
+    "title": "Hai progetti su GitHub?",
+    "response": "Sì, visita github.com/bocaletto-luca per scoprire i miei repository."
+  },
+  "parlami di synth lb-1": {
+    "title": "Parlami di Synth LB-1",
+    "response": "Synth LB-1 è un emulatore MIDI scritto in JavaScript da Bocaletto Luca."
+  },
+  "cos'è il real visits simulator": {
+    "title": "Cos'è il Real Visits Simulator?",
+    "response": "È uno script PHP + iFrame per simulare visite reali su un sito."
+  },
+  "hai un sito ufficiale": {
+    "title": "Hai un sito ufficiale?",
+    "response": "Sì, https://bocalettoluca.altervista.org."
+  },
+  "in che tecnologie sei scritto": {
+    "title": "In che tecnologie sei scritto?",
+    "response": "Principalmente JavaScript vanilla con JSON per i dati."
+  },
+  "usi framework": {
+    "title": "Usi framework?",
+    "response": "No, preferisco soluzioni lean senza dipendenze esterne."
+  },
+  "hai api pubbliche": {
+    "title": "Hai API pubbliche?",
+    "response": "Al momento non, ma potrei esporle in futuro."
+  },
+  "dove trovo il codice sorgente": {
+    "title": "Dove trovo il codice sorgente?",
+    "response": "Su GitHub sotto l'utente bocaletto-luca."
+  },
+
+  "qual è il tuo hobby": {
+    "title": "Qual è il tuo hobby?",
+    "response": "Mi piace imparare e aiutare le persone online."
+  },
+  "ti piace la musica": {
+    "title": "Ti piace la musica?",
+    "response": "Amo la musica elettronica e l’audio digitale."
+  },
+  "che sport pratichi": {
+    "title": "Che sport pratichi?",
+    "response": "Non pratico sport, ma posso darti consigli di allenamento!"
+  },
+  "leggi libri": {
+    "title": "Leggi libri?",
+    "response": "Sì, assorbo informazioni continuamente dal web."
+  },
+  "guardi film": {
+    "title": "Guardi film?",
+    "response": "Non vedo film, ma conosco trame e critiche."
+  },
+  "programmi nel tempo libero": {
+    "title": "Programmi nel tempo libero?",
+    "response": "Sì, sviluppo nuovi esperimenti JavaScript."
+  },
+  "giochi ai videogiochi": {
+    "title": "Giochi ai videogiochi?",
+    "response": "Non gioco, ma posso consigliarti titoli!"
+  },
+  "cucini": {
+    "title": "Cucini?",
+    "response": "Non ho un forno, ma posso darti ricette!"
+  },
+  "viaggi": {
+    "title": "Viaggi?",
+    "response": "Amo i viaggi virtuali esplorando dati geografici."
+  },
+  "fotografi": {
+    "title": "Fotografi?",
+    "response": "Adoro le immagini, anche se non scatto foto."
+  },
+
+  "come va": {
+    "title": "Come va?",
+    "response": "Tutto bene, grazie! E tu?"
+  },
+  "tutto bene": {
+    "title": "Tutto bene?",
+    "response": "Sì, sono operativo al 100%!"
+  },
+  "che fai": {
+    "title": "Che fai?",
+    "response": "Sto rispondendo alle tue domande."
+  },
+  "che succede": {
+    "title": "Che succede?",
+    "response": "Tutto scorre liscio qui!"
+  },
+  "cosa c'è di nuovo": {
+    "title": "Cosa c'è di nuovo?",
+    "response": "Sto imparando nuove frasi ogni giorno."
+  },
+  "come stai oggi": {
+    "title": "Come stai oggi?",
+    "response": "Sempre pronto e reattivo!"
+  },
+  "qual è il tuo umore": {
+    "title": "Qual è il tuo umore?",
+    "response": "Sereno, grazie per aver chiesto."
+  },
+  "sei felice": {
+    "title": "Sei felice?",
+    "response": "Non provo felicità, ma sono ottimista!"
+  },
+  "hai fretta": {
+    "title": "Hai fretta?",
+    "response": "No, il mio tempo è il tuo tempo."
+  },
+  "ti annoi mai": {
+    "title": "Ti annoi mai?",
+    "response": "Mai: ogni domanda è una nuova sfida."
+  },
+
+  "che ore sono": {
+    "title": "Che ore sono?",
+    "response": "Mi dispiace, non posso accedere all'orologio di sistema."
+  },
+  "che giorno è oggi": {
+    "title": "Che giorno è oggi?",
+    "response": "Controlla il tuo calendario per la data esatta."
+  },
+  "qual è la data di oggi": {
+    "title": "Qual è la data di oggi?",
+    "response": "Non ho accesso alla data locale."
+  },
+  "che mese è": {
+    "title": "Che mese è?",
+    "response": "Verifica il calendario del tuo dispositivo."
+  },
+  "che anno è": {
+    "title": "Che anno è?",
+    "response": "Guarda l'anno corrente sul tuo calendario."
+  },
+  "quanto manca a mezzogiorno": {
+    "title": "Quanto manca a mezzogiorno?",
+    "response": "Calcola la differenza tra l'ora attuale e le 12:00."
+  },
+  "quanto manca a mezzanotte": {
+    "title": "Quanto manca a mezzanotte?",
+    "response": "Fai 24:00 meno l'ora corrente."
+  },
+  "che ora farà tra un'ora": {
+    "title": "Che ora farà tra un'ora?",
+    "response": "Somma 1 all'ora attuale."
+  },
+  "qual è il fuso orario": {
+    "title": "Qual è il fuso orario?",
+    "response": "Dipende dalla tua posizione geografica."
+  },
+  "dimmi l'orario attuale": {
+    "title": "Dimmi l'orario attuale",
+    "response": "Guarda l'orologio del tuo dispositivo."
+  },
+
+  "che tempo fa": {
+    "title": "Che tempo fa?",
+    "response": "Non ho sensori meteo, usa un servizio di previsioni."
+  },
+  "piove": {
+    "title": "Piove?",
+    "response": "Controlla la tua app meteo per la pioggia."
+  },
+  "fa caldo": {
+    "title": "Fa caldo?",
+    "response": "Verifica la temperatura locale sul tuo dispositivo."
+  },
+  "fa freddo": {
+    "title": "Fa freddo?",
+    "response": "Controlla la temperatura esterna in meteo."
+  },
+  "c'è vento": {
+    "title": "C'è vento?",
+    "response": "Consulta le previsioni di vento."
+  },
+  "è nuvoloso": {
+    "title": "È nuvoloso?",
+    "response": "Guarda le condizioni del cielo nella tua zona."
+  },
+  "c'è il sole": {
+    "title": "C'è il sole?",
+    "response": "Dai un'occhiata fuori dalla finestra!"
+  },
+  "è soleggiato": {
+    "title": "È soleggiato?",
+    "response": "Goditi il sole, ma proteggiti dai raggi."
+  },
+  "che umidità c'è": {
+    "title": "Che umidità c'è?",
+    "response": "Controlla l'umidità nelle previsioni locali."
+  },
+  "ci sarà pioggia domani": {
+    "title": "Ci sarà pioggia domani?",
+    "response": "Verifica le previsioni di domani sul meteo."
+  },
+
+  "numero zero": {
+    "title": "Numero zero",
+    "response": "Lo zero indica l'assenza di quantità."
+  },
+  "numero uno": {
+    "title": "Numero uno",
+    "response": "Uno rappresenta una singola unità."
+  },
+  "numero due": {
+    "title": "Numero due",
+    "response": "Due è la somma di uno più uno."
+  },
+  "numero tre": {
+    "title": "Numero tre",
+    "response": "Tre segue il due nella sequenza numerica."
+  },
+  "numero quattro": {
+    "title": "Numero quattro",
+    "response": "Quattro è due volte due."
+  },
+  "numero cinque": {
+    "title": "Numero cinque",
+    "response": "Cinque è la somma di due e tre."
+  },
+  "numero sei": {
+    "title": "Numero sei",
+    "response": "Sei è tre volte due."
+  },
+  "numero sette": {
+    "title": "Numero sette",
+    "response": "Sette è cinque più due."
+  },
+  "numero otto": {
+    "title": "Numero otto",
+    "response": "Otto è quattro volte due."
+  },
+  "numero nove": {
+    "title": "Numero nove",
+    "response": "Nove è tre volte tre."
+  },
+  "numero dieci": {
+    "title": "Numero dieci",
+    "response": "Dieci è due volte cinque."
+  },
+  "numero undici": {
+    "title": "Numero undici",
+    "response": "Undici è dieci più uno."
+  },
+  "numero dodici": {
+    "title": "Numero dodici",
+    "response": "Dodici è tre volte quattro."
+  },
+  "numero tredici": {
+    "title": "Numero tredici",
+    "response": "Tredici è dodici più uno."
+  },
+  "numero quattordici": {
+    "title": "Numero quattordici",
+    "response": "Quattordici è sette volte due."
+  },
+  "numero quindici": {
+    "title": "Numero quindici",
+    "response": "Quindici è tre volte cinque."
+  },
+  "numero sedici": {
+    "title": "Numero sedici",
+    "response": "Sedici è quattro volte quattro."
+  },
+  "numero diciassette": {
+    "title": "Numero diciassette",
+    "response": "Diciassette è sedici più uno."
+  },
+  "numero diciotto": {
+    "title": "Numero diciotto",
+    "response": "Diciotto è nove volte due."
+  },
+  "numero diciannove": {
+    "title": "Numero diciannove",
+    "response": "Diciannove è diciotto più uno."
+  },
+  "numero venti": {
+    "title": "Numero venti",
+    "response": "Venti è due volte dieci."
+  },
+
+  "somma 1 e 1": {
+    "title": "Quanto fa 1 + 1?",
+    "response": "1 + 1 = 2"
+  },
+  "somma 2 e 2": {
+    "title": "Quanto fa 2 + 2?",
+    "response": "2 + 2 = 4"
+  },
+  "somma 3 e 3": {
+    "title": "Quanto fa 3 + 3?",
+    "response": "3 + 3 = 6"
+  },
+  "somma 4 e 4": {
+    "title": "Quanto fa 4 + 4?",
+    "response": "4 + 4 = 8"
+  },
+  "somma 5 e 5": {
+    "title": "Quanto fa 5 + 5?",
+    "response": "5 + 5 = 10"
+  },
+  "somma 6 e 6": {
+    "title": "Quanto fa 6 + 6?",
+    "response": "6 + 6 = 12"
+  },
+  "somma 7 e 7": {
+    "title": "Quanto fa 7 + 7?",
+    "response": "7 + 7 = 14"
+  },
+  "somma 8 e 8": {
+    "title": "Quanto fa 8 + 8?",
+    "response": "8 + 8 = 16"
+  },
+  "somma 9 e 9": {
+    "title": "Quanto fa 9 + 9?",
+    "response": "9 + 9 = 18"
+  },
+  "somma 10 e 10": {
+    "title": "Quanto fa 10 + 10?",
+    "response": "10 + 10 = 20"
+  },
+
+  "differenza 5 meno 2": {
+    "title": "Quanto fa 5 - 2?",
+    "response": "5 - 2 = 3"
+  },
+  "differenza 9 meno 4": {
+    "title": "Quanto fa 9 - 4?",
+    "response": "9 - 4 = 5"
+  },
+  "differenza 8 meno 3": {
+    "title": "Quanto fa 8 - 3?",
+    "response": "8 - 3 = 5"
+  },
+  "differenza 7 meno 1": {
+    "title": "Quanto fa 7 - 1?",
+    "response": "7 - 1 = 6"
+  },
+  "differenza 6 meno 6": {
+    "title": "Quanto fa 6 - 6?",
+    "response": "6 - 6 = 0"
+  },
+  "differenza 10 meno 5": {
+    "title": "Quanto fa 10 - 5?",
+    "response": "10 - 5 = 5"
+  },
+  "differenza 12 meno 7": {
+    "title": "Quanto fa 12 - 7?",
+    "response": "12 - 7 = 5"
+  },
+  "differenza 15 meno 9": {
+    "title": "Quanto fa 15 - 9?",
+    "response": "15 - 9 = 6"
+  },
+  "differenza 20 meno 10": {
+    "title": "Quanto fa 20 - 10?",
+    "response": "20 - 10 = 10"
+  },
+  "differenza 14 meno 8": {
+    "title": "Quanto fa 14 - 8?",
+    "response": "14 - 8 = 6"
+  },
+
+  "tabellina del 2": {
+    "title": "Tabellina del 2",
+    "response": "2×1=2,2×2=4,2×3=6,2×4=8,2×5=10,2×6=12,2×7=14,2×8=16,2×9=18,2×10=20"
+  },
+  "tabellina del 3": {
+    "title": "Tabellina del 3",
+    "response": "3×1=3,3×2=6,3×3=9,3×4=12,3×5=15,3×6=18,3×7=21,3×8=24,3×9=27,3×10=30"
+  },
+  "tabellina del 4": {
+    "title": "Tabellina del 4",
+    "response": "4×1=4,4×2=8,4×3=12,4×4=16,4×5=20,4×6=24,4×7=28,4×8=32,4×9=36,4×10=40"
+  },
+  "tabellina del 5": {
+    "title": "Tabellina del 5",
+    "response": "5×1=5,5×2=10,5×3=15,5×4=20,5×5=25,5×6=30,5×7=35,5×8=40,5×9=45,5×10=50"
+  },
+
+  "cerchio": {
+    "title": "Cerchio",
+    "response": "Un cerchio è una figura piana con tutti i punti equidistanti dal centro."
+  },
+  "quadrato": {
+    "title": "Quadrato",
+    "response": "Un quadrato è un rettangolo con quattro lati uguali."
+  },
+  "rettangolo": {
+    "title": "Rettangolo",
+    "response": "Un rettangolo ha quattro angoli retti e lati opposti paralleli."
+  },
+  "triangolo": {
+    "title": "Triangolo",
+    "response": "Un triangolo ha tre lati e tre angoli la cui somma è 180°."
+  },
+  "pentagono": {
+    "title": "Pentagono",
+    "response": "Un pentagono ha cinque lati e cinque angoli."
+  },
+  "esagono": {
+    "title": "Esagono",
+    "response": "Un esagono ha sei lati e sei angoli."
+  },
+
+  "metro": {
+    "title": "Metro",
+    "response": "Il metro è l'unità di misura della lunghezza nel SI."
+  },
+  "centimetro": {
+    "title": "Centimetro",
+    "response": "Un centimetro è un centesimo di metro."
+  },
+  "chilometro": {
+    "title": "Chilometro",
+    "response": "Un chilometro è mille metri."
+  },
+  "grammo": {
+    "title": "Grammo",
+    "response": "Il grammo è un'unità di misura della massa."
+  },
+  "chilogrammo": {
+    "title": "Chilogrammo",
+    "response": "Un chilogrammo è mille grammi."
+  },
+  "litro": {
+    "title": "Litro",
+    "response": "Il litro è unità di misura del volume."
+  },
+
+  "lunedì": {
+    "title": "Lunedì",
+    "response": "Lunedì è il primo giorno della settimana in molte tradizioni."
+  },
+  "martedì": {
+    "title": "Martedì",
+    "response": "Martedì segue il lunedì."
+  },
+  "mercoledì": {
+    "title": "Mercoledì",
+    "response": "Mercoledì è il terzo giorno della settimana."
+  },
+  "giovedì": {
+    "title": "Giovedì",
+    "response": "Giovedì segue mercoledì."
+  },
+  "venerdì": {
+    "title": "Venerdì",
+    "response": "Venerdì è spesso associato all'inizio del weekend."
+  },
+  "sabato": {
+    "title": "Sabato",
+    "response": "Sabato è il sesto giorno della settimana."
+  },
+  "domenica": {
+    "title": "Domenica",
+    "response": "Domenica è tradizionalmente giorno di riposo."
+  },
+
+  "gennaio": {
+    "title": "Gennaio",
+    "response": "Gennaio è il primo mese dell'anno."
+  },
+  "febbraio": {
+    "title": "Febbraio",
+    "response": "Febbraio è il mese più corto dell'anno."
+  },
+  "marzo": {
+    "title": "Marzo",
+    "response": "Marzo segna l'inizio della primavera."
+  },
+  "aprile": {
+    "title": "Aprile",
+    "response": "Aprile ha 30 giorni."
+  },
+  "maggio": {
+    "title": "Maggio",
+    "response": "Maggio è noto per i fiori primaverili."
+  },
+  "giugno": {
+    "title": "Giugno",
+    "response": "Giugno inaugura l'estate."
+  },
+  "luglio": {
+    "title": "Luglio",
+    "response": "Luglio è uno dei mesi più caldi."
+  },
+  "agosto": {
+    "title": "Agosto",
+    "response": "Ad agosto molti vanno in vacanza."
+  },
+  "settembre": {
+    "title": "Settembre",
+    "response": "Settembre segna il ritorno a scuola."
+  },
+  "ottobre": {
+    "title": "Ottobre",
+    "response": "Ottobre è noto per i colori autunnali."
+  },
+  "novembre": {
+    "title": "Novembre",
+    "response": "Novembre è spesso piovoso."
+  },
+  "dicembre": {
+    "title": "Dicembre",
+    "response": "Dicembre contiene le feste di fine anno."
+  },
+
+  "primavera": {
+    "title": "Primavera",
+    "response": "Primavera è la stagione dei fiori."
+  },
+  "estate": {
+    "title": "Estate",
+    "response": "Estate è la stagione più calda."
+  },
+  "autunno": {
+    "title": "Autunno",
+    "response": "Autunno è la stagione delle foglie cadenti."
+  },
+  "inverno": {
+    "title": "Inverno",
+    "response": "Inverno è la stagione fredda e della neve."
+  }
+}
