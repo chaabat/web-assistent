@@ -20,13 +20,15 @@ A self-contained, bilingual web assistant that runs entirely from a single `inde
 
 ## File Structure
 
-| Path          | Description                                                                 |
-|---------------|-----------------------------------------------------------------------------|
+| Path          | Description                                                                  |
+|---------------|------------------------------------------------------------------------------|
 | index.html    | Main assistant interface; loads `en.json` or `it.json` based on locale       |
 | admin.html    | JSON editor for adding, modifying, deleting, and saving phrase entries       |
 | en.json       | English phrase library                                                       |
 | it.json       | Italian phrase library                                                       |
-
+| fr.json       | French phrase library                                                        |
+| es.json       | Spanish phrase library                                                       |
+| de.json       | Germany phrase library                                                       |
 ---
 
 ## Getting Started
