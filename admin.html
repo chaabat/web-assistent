@@ -1,335 +1,280 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Universal Web Assistant — Admin</title>
-  <meta name="description" content="Admin panel for editing the Universal Web Assistant phrase libraries (EN/IT).">
-  
-  <!-- Open Graph (English only) -->
-  <meta property="og:title" content="Universal Web Assistant — Admin">
-  <meta property="og:description" content="Admin panel for editing the Universal Web Assistant phrase libraries (EN/IT).">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://your-domain.com/admin.html">
-  <meta property="og:site_name" content="web-assistent">
-  <meta property="og:locale" content="en_US">
-  
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Universal Web Assistant — Admin">
-  <meta name="twitter:description" content="Admin panel for editing the Universal Web Assistant phrase libraries (EN/IT).">
-
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Admin – Assistente Universale</title>
+  <meta name="description" content="Pannello di amministrazione per traduzioni e frasi del bot">
   <style>
     /* Reset & Base */
-    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-    html { font-family: 'Segoe UI', sans-serif; font-size:16px; line-height:1.5; }
-    body { background:#f9f9f9; color:#222; display:flex; flex-direction:column; min-height:100vh; }
-
-    /* Containers */
-    header, footer { background:#0066cc; color:#fff; }
-    .container { max-width:900px; margin:0 auto; padding:1rem; width:100%; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { font-family:sans-serif; font-size:16px; }
+    body { display:flex; flex-direction:column; min-height:100vh; }
 
     /* Header */
-    header { display:flex; align-items:center; justify-content:space-between; }
+    header {
+      background:#0066cc; color:#fff; padding:.75rem 1rem;
+      display:flex; align-items:center; justify-content:space-between;
+    }
     header h1 { font-size:1.25rem; }
-    #langToggle {
-      background:transparent; border:2px solid #fff; color:#fff;
-      padding:0.25em 0.75em; font-size:0.9rem; border-radius:4px; cursor:pointer;
+
+    /* Layout */
+    main { flex:1; display:flex; }
+    .sidebar {
+      width:240px; background:#f5f5f5; padding:1rem;
+      border-right:1px solid #ddd;
+    }
+    .sidebar select { width:100%; padding:.5rem; margin-bottom:1rem; }
+    .sidebar nav button {
+      width:100%; padding:.5rem; margin-bottom:.5rem;
+      border:none; background:#e0e0e0; cursor:pointer;
+    }
+    .sidebar nav button.active { background:#0066cc; color:#fff; }
+
+    .editor {
+      flex:1; padding:1rem; overflow-y:auto;
+    }
+    .editor h2 { margin-bottom:.5rem; font-size:1.1rem; }
+    form { display:grid; grid-gap:.75rem; margin-bottom:1rem; }
+
+    form .field {
+      display:flex; flex-direction:column;
+    }
+    form .field label { margin-bottom:.25rem; font-weight:500; }
+    form .field input,
+    form .field textarea {
+      padding:.5rem; border:1px solid #ccc; border-radius:4px;
+      font-size:1rem;
+    }
+    textarea { resize:vertical; min-height:3rem; }
+
+    .actions {
+      display:flex; gap:1rem; flex-wrap:wrap;
+    }
+    .actions button {
+      padding:.5rem 1rem; border:none; background:#0066cc;
+      color:#fff; cursor:pointer; border-radius:4px;
     }
 
-    /* Main */
-    main { flex:1; padding:1rem 0; }
-    .panel { background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1); padding:1rem; }
-    .controls { display:flex; flex-wrap:wrap; gap:1rem; margin-bottom:1rem; }
-    .controls label { display:flex; flex-direction:column; font-weight:600; }
-    .controls select, .controls input[type="file"] { margin-top:0.25rem; }
-
-    /* Table */
-    table { width:100%; border-collapse:collapse; margin-bottom:1rem; }
-    th, td { border:1px solid #ddd; padding:0.5rem; text-align:left; vertical-align:top; }
-    th { background:#f0f0f0; }
-    td.actions button { margin-right:0.5rem; }
-    td.actions button:last-child { margin-right:0; }
-
-    /* Add Form */
-    .add-form { display:flex; flex-wrap:wrap; gap:1rem; margin-bottom:1rem; }
-    .add-form input, .add-form textarea {
-      flex:1; padding:0.5rem; border:1px solid #ccc; border-radius:4px;
-    }
-    .add-form textarea { resize:vertical; }
-
-    /* Buttons */
-    button {
-      background:#0066cc; color:#fff; border:none; padding:0.5rem 1rem;
-      border-radius:4px; cursor:pointer; font-size:0.9rem;
-    }
-    button.danger { background:#cc3300; }
-    button:disabled { opacity:0.6; cursor:not-allowed; }
+    /* Hidden view */
+    .hidden { display:none; }
 
     /* Footer */
-    footer { text-align:center; padding:0.75rem 0; font-size:0.9rem; }
-
-    /* Responsive */
-    @media (max-width:600px) {
-      .controls, .add-form { flex-direction:column; }
+    footer {
+      text-align:center; padding:.5rem; font-size:.85rem;
+      background:#eee;
     }
+
+    /* Dark mode */
+    :root[data-theme="dark"] {
+      --bg: #222; --fg: #ddd; --bg-alt: #333; --border: #444;
+    }
+    :root[data-theme="dark"] body { background:var(--bg); color:var(--fg); }
+    :root[data-theme="dark"] .sidebar { background:var(--bg-alt); }
+    :root[data-theme="dark"] .sidebar nav button { background:var(--border); }
+    :root[data-theme="dark"] .sidebar nav button.active { background:#0055aa; }
+    :root[data-theme="dark"] .editor { background:var(--bg); }
+    :root[data-theme="dark"] form .field input,
+    :root[data-theme="dark"] form .field textarea {
+      background:var(--bg-alt); color:var(--fg); border:1px solid var(--border);
+    }
+    :root[data-theme="dark"] header { background:#0055aa; }
+    :root[data-theme="dark"] .actions button { background:#0055aa; }
   </style>
 </head>
-<body>
+<body data-theme="light">
   <header>
-    <div class="container">
-      <h1 id="adminTitle">Assistant Admin Panel</h1>
-      <button id="langToggle">IT</button>
-    </div>
+    <h1>Admin – Assistente Universale</h1>
+    <button id="toggle-theme" aria-label="Cambia tema">🌓</button>
   </header>
 
-  <main class="container">
-    <div class="panel">
-      <!-- File Controls -->
-      <div class="controls">
-        <label id="selectLabel">
-          Select file
-          <select id="fileSelect">
-            <option value="en.json">en.json</option>
-            <option value="it.json">it.json</option>
-          </select>
-        </label>
-        <button id="loadBtn">Load</button>
+  <main>
+    <aside class="sidebar">
+      <label for="langSelect">Seleziona lingua</label>
+      <select id="langSelect">
+        <option value="it">Italiano</option>
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+        <option value="pt">Português</option>
+        <option value="cn">中文</option>
+        <option value="ja">日本語</option>
+      </select>
+      <nav>
+        <button data-view="ui" class="active">Testi UI</button>
+        <button data-view="phrases">Frasi Bot</button>
+      </nav>
+    </aside>
 
-        <label id="uploadLabel">
-          Or upload JSON
-          <input type="file" id="fileInput" accept=".json">
-        </label>
+    <section class="editor">
+      <!-- UI Texts Editor -->
+      <div id="view-ui">
+        <h2>Modifica Testi UI</h2>
+        <form id="uiForm"></form>
+        <div class="actions">
+          <button id="addUiKey">+ Nuova chiave UI</button>
+          <button id="saveUi">💾 Salva UI</button>
+        </div>
       </div>
 
-      <!-- Entries Table -->
-      <table aria-label="Phrases table">
-        <thead>
-          <tr>
-            <th id="colKey">Key</th>
-            <th id="colTitle">Title</th>
-            <th id="colResp">Response</th>
-            <th id="colActions">Actions</th>
-          </tr>
-        </thead>
-        <tbody id="tableBody">
-          <!-- Dynamically injected rows -->
-        </tbody>
-      </table>
-
-      <!-- Add New Entry -->
-      <form id="addForm" class="add-form">
-        <input type="text" id="newKey" placeholder="Key" required>
-        <input type="text" id="newTitle" placeholder="Title" required>
-        <textarea id="newResp" rows="2" placeholder="Response" required></textarea>
-        <button type="submit" id="addBtn">Add Entry</button>
-      </form>
-
-      <!-- Save -->
-      <button id="saveBtn">Save JSON</button>
-    </div>
+      <!-- Bot Phrases Editor -->
+      <div id="view-phrases" class="hidden">
+        <h2>Modifica Frasi Bot</h2>
+        <form id="phrasesForm"></form>
+        <div class="actions">
+          <button id="addPhraseKey">+ Nuova chiave Frase</button>
+          <button id="savePhrases">💾 Salva Frasi</button>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <div class="container">
-      © 2023 Bocaletto Luca • <a href="https://github.com/bocaletto-luca/web-assistent" target="_blank">GitHub</a> • MIT License
-    </div>
+    © 2025 Tuo Nome. Tutti i diritti riservati.
   </footer>
 
   <script>
-    // i18n dictionaries
-    const DICTS = {
-      en: {
-        adminTitle: 'Assistant Admin Panel',
-        selectLabel: 'Select file',
-        loadBtn: 'Load',
-        uploadLabel: 'Or upload JSON',
-        colKey: 'Key',
-        colTitle: 'Title',
-        colResp: 'Response',
-        colActions: 'Actions',
-        editBtn: 'Edit',
-        delBtn: 'Delete',
-        addBtn: 'Add Entry',
-        saveBtn: 'Save JSON',
-        fallback: 'Entry not found.',
-        toggleLabel: 'IT'
-      },
-      it: {
-        adminTitle: 'Pannello di Amministrazione',
-        selectLabel: 'Seleziona file',
-        loadBtn: 'Carica',
-        uploadLabel: 'Oppure carica JSON',
-        colKey: 'Chiave',
-        colTitle: 'Titolo',
-        colResp: 'Risposta',
-        colActions: 'Azioni',
-        editBtn: 'Modifica',
-        delBtn: 'Elimina',
-        addBtn: 'Aggiungi Voce',
-        saveBtn: 'Salva JSON',
-        fallback: 'Voce non trovata.',
-        toggleLabel: 'EN'
-      }
-    };
+    const supported = ['it','en','es','fr','de','pt','cn','ja'];
+    let currentLang = 'it';
+    let uiDict = {}, phraseDict = {};
 
-    let locale = 'en';
-    let currentFile = 'en.json';
-    let jsonData = {};
+    const langSelect      = document.getElementById('langSelect');
+    const toggleTheme     = document.getElementById('toggle-theme');
+    const navButtons      = document.querySelectorAll('.sidebar nav button');
+    const viewUi          = document.getElementById('view-ui');
+    const viewPhrases     = document.getElementById('view-phrases');
+    const uiForm          = document.getElementById('uiForm');
+    const phrasesForm     = document.getElementById('phrasesForm');
+    const addUiKeyBtn     = document.getElementById('addUiKey');
+    const saveUiBtn       = document.getElementById('saveUi');
+    const addPhraseKeyBtn = document.getElementById('addPhraseKey');
+    const savePhrasesBtn  = document.getElementById('savePhrases');
 
-    // DOM refs
-    const langToggle = document.getElementById('langToggle');
-    const adminTitle = document.getElementById('adminTitle');
-    const fileSelect  = document.getElementById('fileSelect');
-    const loadBtn     = document.getElementById('loadBtn');
-    const fileInput   = document.getElementById('fileInput');
-    const tableBody   = document.getElementById('tableBody');
-    const addForm     = document.getElementById('addForm');
-    const newKey      = document.getElementById('newKey');
-    const newTitle    = document.getElementById('newTitle');
-    const newResp     = document.getElementById('newResp');
-    const saveBtn     = document.getElementById('saveBtn');
-
-    // Apply translations
-    function translateUI() {
-      const d = DICTS[locale];
-      adminTitle.textContent         = d.adminTitle;
-      document.getElementById('selectLabel').firstChild.textContent = d.selectLabel + ' ';
-      loadBtn.textContent            = d.loadBtn;
-      document.getElementById('uploadLabel').firstChild.textContent = d.uploadLabel + ' ';
-      document.getElementById('colKey').textContent   = d.colKey;
-      document.getElementById('colTitle').textContent = d.colTitle;
-      document.getElementById('colResp').textContent  = d.colResp;
-      document.getElementById('colActions').textContent = d.colActions;
-      addForm.querySelector('#addBtn').textContent = d.addBtn;
-      saveBtn.textContent           = d.saveBtn;
-      langToggle.textContent        = d.toggleLabel;
-    }
-
-    // Toggle language
-    langToggle.addEventListener('click', () => {
-      locale = locale === 'en' ? 'it' : 'en';
-      document.documentElement.lang = locale;
-      translateUI();
-      renderTable();
+    // Tema chiaro/scuro
+    toggleTheme.addEventListener('click', () => {
+      const root = document.documentElement;
+      root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
     });
 
-    // Load JSON via fetch
-    async function loadJSON(name) {
-      try {
-        const res = await fetch(name + '?_=' + Date.now());
-        jsonData = await res.json();
-        currentFile = name;
-        renderTable();
-      } catch (e) {
-        alert('Failed to load ' + name);
-      }
-    }
-
-    loadBtn.addEventListener('click', () => {
-      loadJSON(fileSelect.value);
-    });
-
-    // Load JSON via file upload
-    fileInput.addEventListener('change', e => {
-      const file = e.target.files[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = () => {
-        try {
-          jsonData = JSON.parse(reader.result);
-          currentFile = file.name;
-          renderTable();
-        } catch {
-          alert('Invalid JSON file.');
+    // Cambia vista UI / Frasi
+    navButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        navButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        if (btn.dataset.view === 'ui') {
+          viewUi.classList.remove('hidden');
+          viewPhrases.classList.add('hidden');
+        } else {
+          viewUi.classList.add('hidden');
+          viewPhrases.classList.remove('hidden');
         }
-      };
-      reader.readAsText(file);
+      });
     });
 
-    // Render table rows
-    function renderTable() {
-      tableBody.innerHTML = '';
-      const keys = Object.keys(jsonData);
-      if (!keys.length) return;
-      keys.forEach(key => {
-        const row = document.createElement('tr');
-        // Key cell
-        const tdKey = document.createElement('td');
-        tdKey.textContent = key;
-        row.append(tdKey);
-        // Title
-        const tdTitle = document.createElement('td');
-        const inpTitle = document.createElement('input');
-        inpTitle.value = jsonData[key].title;
-        tdTitle.append(inpTitle);
-        row.append(tdTitle);
-        // Response
-        const tdResp = document.createElement('td');
-        const inpResp = document.createElement('textarea');
-        inpResp.rows = 2;
-        inpResp.value = jsonData[key].response;
-        tdResp.append(inpResp);
-        row.append(tdResp);
-        // Actions
-        const tdAct = document.createElement('td');
-        tdAct.className = 'actions';
-        const editBtn = document.createElement('button');
-        editBtn.textContent = DICTS[locale].editBtn;
-        editBtn.addEventListener('click', () => {
-          const t = inpTitle.value.trim();
-          const r = inpResp.value.trim();
-          if (!t || !r) return alert('Empty fields');
-          jsonData[key] = { title: t, response: r };
-        });
-        const delBtn = document.createElement('button');
-        delBtn.className = 'danger';
-        delBtn.textContent = DICTS[locale].delBtn;
-        delBtn.addEventListener('click', () => {
-          delete jsonData[key];
-          renderTable();
-        });
-        tdAct.append(editBtn, delBtn);
-        row.append(tdAct);
-        tableBody.append(row);
-      });
+    // Carica dizionari JSON
+    async function loadDictionaries(lang) {
+      if (!supported.includes(lang)) lang = 'it';
+      currentLang = lang;
+      langSelect.value = lang;
+      uiForm.innerHTML = '';
+      phrasesForm.innerHTML = '';
+
+      try {
+        uiDict = await fetch(`locales/${lang}.json`).then(r => r.json());
+      } catch {
+        uiDict = {};
+      }
+      try {
+        phraseDict = await fetch(`phrases/${lang}.json`).then(r => r.json());
+      } catch {
+        phraseDict = {};
+      }
+
+      buildForm(uiForm, uiDict, 'ui');
+      buildForm(phrasesForm, phraseDict, 'phrases');
     }
 
-    // Add new entry
-    addForm.addEventListener('submit', e => {
-      e.preventDefault();
-      const k = newKey.value.trim().toLowerCase();
-      const t = newTitle.value.trim();
-      const r = newResp.value.trim();
-      if (!k || !t || !r) return alert('All fields required');
-      if (jsonData[k]) return alert('Key exists');
-      jsonData[k] = { title: t, response: r };
-      newKey.value = '';
-      newTitle.value = '';
-      newResp.value = '';
-      renderTable();
-    });
+    // Genera campi dinamici
+    function buildForm(formEl, dict, type) {
+      for (let key in dict) {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'field';
+        const label = document.createElement('label');
+        label.textContent = key;
+        const input = type === 'ui'
+          ? document.createElement('input')
+          : document.createElement('textarea');
+        input.value = dict[key];
+        input.dataset.key = key;
+        wrapper.append(label, input);
+        formEl.appendChild(wrapper);
+      }
+    }
 
-    // Save JSON (download)
-    saveBtn.addEventListener('click', () => {
-      const blob = new Blob(
-        [JSON.stringify(jsonData, null, 2)],
-        { type: 'application/json' }
-      );
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = currentFile;
-      a.click();
-      URL.revokeObjectURL(url);
-    });
+    // Aggiungi nuovo campo
+    function addField(type) {
+      const formEl = type === 'ui' ? uiForm : phrasesForm;
+      const key = prompt('Inserisci la nuova chiave:');
+      if (!key) return;
+      if (type==='ui') uiDict[key]='';
+      else phraseDict[key]='';
+      const wrapper = document.createElement('div');
+      wrapper.className = 'field';
+      const label = document.createElement('label');
+      label.textContent = key;
+      const input = type==='ui'
+        ? document.createElement('input')
+        : document.createElement('textarea');
+      input.value = '';
+      input.dataset.key = key;
+      wrapper.append(label, input);
+      formEl.appendChild(wrapper);
+    }
 
-    // Init
-    (async () => {
-      document.documentElement.lang = locale;
-      translateUI();
-      await loadJSON(currentFile);
-    })();
+    // Raccogli dati e salva
+    async function saveDict(type) {
+      const dict = {};
+      const formEl = type==='ui' ? uiForm : phrasesForm;
+      formEl.querySelectorAll('[data-key]').forEach(el => {
+        dict[el.dataset.key] = el.value;
+      });
+
+      const url = `/api/save/${type}/${currentLang}`;
+      try {
+        // Tenta salvataggio via API
+        await fetch(url, {
+          method: 'PUT',
+          headers: {'Content-Type':'application/json'},
+          body: JSON.stringify(dict)
+        });
+        alert('Salvataggio avvenuto con successo.');
+      } catch {
+        // Fallback: download JSON file
+        const blob = new Blob(
+          [JSON.stringify(dict,null,2)],
+          {type:'application/json'}
+        );
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = `${type}_${currentLang}.json`;
+        a.click();
+        alert('API non disponibile, scaricato JSON localmente.');
+      }
+    }
+
+    // Eventi
+    langSelect.addEventListener('change', () => loadDictionaries(langSelect.value));
+    addUiKeyBtn.addEventListener('click', () => addField('ui'));
+    addPhraseKeyBtn.addEventListener('click', () => addField('phrases'));
+    saveUiBtn.addEventListener('click', () => saveDict('ui'));
+    savePhrasesBtn.addEventListener('click', () => saveDict('phrases'));
+
+    // Inizializzazione
+    document.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('appLang') || navigator.language.slice(0,2) || 'it';
+      loadDictionaries(saved);
+    });
   </script>
 </body>
 </html>
