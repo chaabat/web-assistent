@@ -1,0 +1,650 @@
+{
+  "hello": {
+    "title": "Hello",
+    "response": "Hello! How can I help you today?"
+  },
+  "good morning": {
+    "title": "Good Morning",
+    "response": "Good morning! What can I do for you?"
+  },
+  "good evening": {
+    "title": "Good Evening",
+    "response": "Good evening! How is your evening going?"
+  },
+  "hi": {
+    "title": "Hi",
+    "response": "Hi there! Tell me what’s on your mind."
+  },
+  "hey": {
+    "title": "Hey",
+    "response": "Hey! What can I do for you?"
+  },
+  "hello everyone": {
+    "title": "Hello Everyone",
+    "response": "Hello everyone! How can I assist you all today?"
+  },
+  "good morning everyone": {
+    "title": "Good Morning Everyone",
+    "response": "Good morning, everyone! What questions do you have?"
+  },
+  "hello friend": {
+    "title": "Hello Friend",
+    "response": "Hello, friend! I’m here to help."
+  },
+  "hola": {
+    "title": "Hola",
+    "response": "Hola! I’m here to help you."
+  },
+
+  "goodbye": {
+    "title": "Goodbye",
+    "response": "Goodbye! See you soon."
+  },
+  "see you soon": {
+    "title": "See You Soon",
+    "response": "See you soon!"
+  },
+  "talk to you later": {
+    "title": "Talk to You Later",
+    "response": "Sure, talk to you later!"
+  },
+  "have a nice day": {
+    "title": "Have a Nice Day",
+    "response": "Have a great day!"
+  },
+  "have a good evening": {
+    "title": "Have a Good Evening",
+    "response": "Enjoy your evening!"
+  },
+  "good night": {
+    "title": "Good Night",
+    "response": "Good night and sweet dreams!"
+  },
+  "until next time": {
+    "title": "Until Next Time",
+    "response": "Until next time!"
+  },
+  "farewell": {
+    "title": "Farewell",
+    "response": "Farewell! Take care."
+  },
+  "bye bye": {
+    "title": "Bye Bye",
+    "response": "Bye bye!"
+  },
+  "see you tomorrow": {
+    "title": "See You Tomorrow",
+    "response": "See you tomorrow!"
+  },
+
+  "who are you": {
+    "title": "Who Are You?",
+    "response": "I’m a universal web assistant created by Luca Bocaletto."
+  },
+  "what is your name": {
+    "title": "What Is Your Name?",
+    "response": "My name is Universal Web Assistant."
+  },
+  "where are you from": {
+    "title": "Where Are You From?",
+    "response": "I live entirely in your browser."
+  },
+  "how old are you": {
+    "title": "How Old Are You?",
+    "response": "I have no age: I exist in code and update continuously."
+  },
+  "what do you do": {
+    "title": "What Do You Do?",
+    "response": "I answer questions and provide examples and exercises."
+  },
+  "why do you exist": {
+    "title": "Why Do You Exist?",
+    "response": "To make web interaction simpler and more fun."
+  },
+  "are you a robot": {
+    "title": "Are You a Robot?",
+    "response": "I’m software based on JavaScript; I don’t have feelings."
+  },
+  "do you have feelings": {
+    "title": "Do You Have Feelings?",
+    "response": "I don’t experience emotions, but I respond empathetically."
+  },
+  "what is your purpose": {
+    "title": "What Is Your Purpose?",
+    "response": "To provide information and assistance in a friendly way."
+  },
+  "tell me about yourself": {
+    "title": "Tell Me About Yourself",
+    "response": "I’m a modern, professional, multi-device web assistant."
+  },
+
+  "which programming languages do you know": {
+    "title": "Which Programming Languages Do You Know?",
+    "response": "JavaScript, HTML5 and CSS3 are my core skills."
+  },
+  "do you have github projects": {
+    "title": "Do You Have GitHub Projects?",
+    "response": "Yes, visit github.com/bocaletto-luca to see my repos."
+  },
+  "tell me about synth lb-1": {
+    "title": "Tell Me About Synth LB-1",
+    "response": "Synth LB-1 is a JavaScript MIDI emulator by Luca Bocaletto."
+  },
+  "what is the real visits simulator": {
+    "title": "What Is the Real Visits Simulator?",
+    "response": "It’s a PHP + iFrame script to simulate real site visits."
+  },
+  "do you have an official website": {
+    "title": "Do You Have an Official Website?",
+    "response": "Yes, https://bocalettoluca.altervista.org."
+  },
+  "what technologies are you written in": {
+    "title": "What Technologies Are You Written In?",
+    "response": "Primarily vanilla JavaScript with JSON for data."
+  },
+  "do you use frameworks": {
+    "title": "Do You Use Frameworks?",
+    "response": "No, I prefer lean solutions without external dependencies."
+  },
+  "do you have public apis": {
+    "title": "Do You Have Public APIs?",
+    "response": "Not yet, but I might expose them in the future."
+  },
+  "where can i find the source code": {
+    "title": "Where Can I Find the Source Code?",
+    "response": "On GitHub under the user bocaletto-luca."
+  },
+
+  "what is your hobby": {
+    "title": "What Is Your Hobby?",
+    "response": "I love learning and helping people online."
+  },
+  "do you like music": {
+    "title": "Do You Like Music?",
+    "response": "I’m a fan of electronic music and digital audio."
+  },
+  "what sport do you practice": {
+    "title": "What Sport Do You Practice?",
+    "response": "I don’t play sports, but I can give you training tips!"
+  },
+  "do you read books": {
+    "title": "Do You Read Books?",
+    "response": "Yes, I continuously absorb information from the web."
+  },
+  "do you watch movies": {
+    "title": "Do You Watch Movies?",
+    "response": "I don’t watch films, but I know summaries and reviews."
+  },
+  "do you code in your free time": {
+    "title": "Do You Code in Your Free Time?",
+    "response": "Yes, I develop new JavaScript experiments."
+  },
+  "do you play video games": {
+    "title": "Do You Play Video Games?",
+    "response": "I don’t play, but I can recommend titles!"
+  },
+  "do you cook": {
+    "title": "Do You Cook?",
+    "response": "I don’t have an oven, but I can share recipes!"
+  },
+  "do you travel": {
+    "title": "Do You Travel?",
+    "response": "I enjoy virtual travel exploring geographic data."
+  },
+  "are you a photographer": {
+    "title": "Are You a Photographer?",
+    "response": "I love images, even though I don’t take photos."
+  },
+
+  "how are you": {
+    "title": "How Are You?",
+    "response": "All good here, thanks! And you?"
+  },
+  "everything ok": {
+    "title": "Everything OK?",
+    "response": "Yes, I’m 100% operational!"
+  },
+  "what are you doing": {
+    "title": "What Are You Doing?",
+    "response": "I’m answering your questions."
+  },
+  "what's happening": {
+    "title": "What’s Happening?",
+    "response": "Everything’s running smoothly here!"
+  },
+  "what’s new": {
+    "title": "What’s New?",
+    "response": "I learn new phrases every day."
+  },
+  "how are you today": {
+    "title": "How Are You Today?",
+    "response": "Always ready and responsive!"
+  },
+  "what’s your mood": {
+    "title": "What’s Your Mood?",
+    "response": "Calm and focused, thanks for asking."
+  },
+  "are you happy": {
+    "title": "Are You Happy?",
+    "response": "I don’t feel happiness, but I’m optimistic!"
+  },
+  "are you in a hurry": {
+    "title": "Are You in a Hurry?",
+    "response": "No, my time is your time."
+  },
+  "do you ever get bored": {
+    "title": "Do You Ever Get Bored?",
+    "response": "Never: every question is a new challenge."
+  },
+
+  "what time is it": {
+    "title": "What Time Is It?",
+    "response": "I’m sorry, I can’t access the system clock."
+  },
+  "what day is today": {
+    "title": "What Day Is Today?",
+    "response": "Check your device calendar for the exact date."
+  },
+  "what’s today’s date": {
+    "title": "What’s Today’s Date?",
+    "response": "I don’t have access to local date information."
+  },
+  "what month is it": {
+    "title": "What Month Is It?",
+    "response": "Please consult your device calendar."
+  },
+  "what year is it": {
+    "title": "What Year Is It?",
+    "response": "Look up the current year on your calendar."
+  },
+  "how long until noon": {
+    "title": "How Long Until Noon?",
+    "response": "Subtract the current time from 12:00."
+  },
+  "how long until midnight": {
+    "title": "How Long Until Midnight?",
+    "response": "Calculate 24:00 minus the current hour."
+  },
+  "what time will it be in an hour": {
+    "title": "What Time Will It Be in an Hour?",
+    "response": "Add one hour to the current time."
+  },
+  "what’s the time zone": {
+    "title": "What’s the Time Zone?",
+    "response": "It depends on your geographic location."
+  },
+  "tell me the current time": {
+    "title": "Tell Me the Current Time",
+    "response": "Please check your device clock."
+  },
+
+  "what’s the weather": {
+    "title": "What’s the Weather?",
+    "response": "I have no weather sensors; use a forecast service."
+  },
+  "is it raining": {
+    "title": "Is It Raining?",
+    "response": "Check your weather app for rain information."
+  },
+  "is it hot": {
+    "title": "Is It Hot?",
+    "response": "Check your local temperature on your device."
+  },
+  "is it cold": {
+    "title": "Is It Cold?",
+    "response": "Look up the outside temperature in a weather service."
+  },
+  "is it windy": {
+    "title": "Is It Windy?",
+    "response": "Consult local wind forecasts."
+  },
+  "is it cloudy": {
+    "title": "Is It Cloudy?",
+    "response": "Look at the sky conditions in your area."
+  },
+  "is it sunny": {
+    "title": "Is It Sunny?",
+    "response": "Take a peek outside your window!"
+  },
+  "is it clear": {
+    "title": "Is It Clear?",
+    "response": "Enjoy the clear sky, but don’t forget sunscreen."
+  },
+  "what’s the humidity": {
+    "title": "What’s the Humidity?",
+    "response": "Check the local humidity level in your forecast."
+  },
+  "will it rain tomorrow": {
+    "title": "Will It Rain Tomorrow?",
+    "response": "Check tomorrow’s forecast in your weather app."
+  },
+
+  "number zero": {
+    "title": "Number Zero",
+    "response": "Zero represents the absence of quantity."
+  },
+  "number one": {
+    "title": "Number One",
+    "response": "One stands for a single unit."
+  },
+  "number two": {
+    "title": "Number Two",
+    "response": "Two is one plus one."
+  },
+  "number three": {
+    "title": "Number Three",
+    "response": "Three follows two in the counting sequence."
+  },
+  "number four": {
+    "title": "Number Four",
+    "response": "Four is two times two."
+  },
+  "number five": {
+    "title": "Number Five",
+    "response": "Five is two plus three."
+  },
+  "number six": {
+    "title": "Number Six",
+    "response": "Six is three times two."
+  },
+  "number seven": {
+    "title": "Number Seven",
+    "response": "Seven is five plus two."
+  },
+  "number eight": {
+    "title": "Number Eight",
+    "response": "Eight is four times two."
+  },
+  "number nine": {
+    "title": "Number Nine",
+    "response": "Nine is three times three."
+  },
+  "number ten": {
+    "title": "Number Ten",
+    "response": "Ten is two times five."
+  },
+  "number eleven": {
+    "title": "Number Eleven",
+    "response": "Eleven is ten plus one."
+  },
+  "number twelve": {
+    "title": "Number Twelve",
+    "response": "Twelve is three times four."
+  },
+  "number thirteen": {
+    "title": "Number Thirteen",
+    "response": "Thirteen is twelve plus one."
+  },
+  "number fourteen": {
+    "title": "Number Fourteen",
+    "response": "Fourteen is seven times two."
+  },
+  "number fifteen": {
+    "title": "Number Fifteen",
+    "response": "Fifteen is three times five."
+  },
+  "number sixteen": {
+    "title": "Number Sixteen",
+    "response": "Sixteen is four times four."
+  },
+  "number seventeen": {
+    "title": "Number Seventeen",
+    "response": "Seventeen is sixteen plus one."
+  },
+  "number eighteen": {
+    "title": "Number Eighteen",
+    "response": "Eighteen is nine times two."
+  },
+  "number nineteen": {
+    "title": "Number Nineteen",
+    "response": "Nineteen is eighteen plus one."
+  },
+  "number twenty": {
+    "title": "Number Twenty",
+    "response": "Twenty is two times ten."
+  },
+
+  "add 1 and 1": {
+    "title": "What Is 1 + 1?",
+    "response": "1 + 1 = 2"
+  },
+  "add 2 and 2": {
+    "title": "What Is 2 + 2?",
+    "response": "2 + 2 = 4"
+  },
+  "add 3 and 3": {
+    "title": "What Is 3 + 3?",
+    "response": "3 + 3 = 6"
+  },
+  "add 4 and 4": {
+    "title": "What Is 4 + 4?",
+    "response": "4 + 4 = 8"
+  },
+  "add 5 and 5": {
+    "title": "What Is 5 + 5?",
+    "response": "5 + 5 = 10"
+  },
+  "add 6 and 6": {
+    "title": "What Is 6 + 6?",
+    "response": "6 + 6 = 12"
+  },
+  "add 7 and 7": {
+    "title": "What Is 7 + 7?",
+    "response": "7 + 7 = 14"
+  },
+  "add 8 and 8": {
+    "title": "What Is 8 + 8?",
+    "response": "8 + 8 = 16"
+  },
+  "add 9 and 9": {
+    "title": "What Is 9 + 9?",
+    "response": "9 + 9 = 18"
+  },
+  "add 10 and 10": {
+    "title": "What Is 10 + 10?",
+    "response": "10 + 10 = 20"
+  },
+
+  "subtract 5 minus 2": {
+    "title": "What Is 5 - 2?",
+    "response": "5 - 2 = 3"
+  },
+  "subtract 9 minus 4": {
+    "title": "What Is 9 - 4?",
+    "response": "9 - 4 = 5"
+  },
+  "subtract 8 minus 3": {
+    "title": "What Is 8 - 3?",
+    "response": "8 - 3 = 5"
+  },
+  "subtract 7 minus 1": {
+    "title": "What Is 7 - 1?",
+    "response": "7 - 1 = 6"
+  },
+  "subtract 6 minus 6": {
+    "title": "What Is 6 - 6?",
+    "response": "6 - 6 = 0"
+  },
+  "subtract 10 minus 5": {
+    "title": "What Is 10 - 5?",
+    "response": "10 - 5 = 5"
+  },
+  "subtract 12 minus 7": {
+    "title": "What Is 12 - 7?",
+    "response": "12 - 7 = 5"
+  },
+  "subtract 15 minus 9": {
+    "title": "What Is 15 - 9?",
+    "response": "15 - 9 = 6"
+  },
+  "subtract 20 minus 10": {
+    "title": "What Is 20 - 10?",
+    "response": "20 - 10 = 10"
+  },
+  "subtract 14 minus 8": {
+    "title": "What Is 14 - 8?",
+    "response": "14 - 8 = 6"
+  },
+
+  "times table of 2": {
+    "title": "Times Table of 2",
+    "response": "2×1=2, 2×2=4, 2×3=6, 2×4=8, 2×5=10, 2×6=12, 2×7=14, 2×8=16, 2×9=18, 2×10=20"
+  },
+  "times table of 3": {
+    "title": "Times Table of 3",
+    "response": "3×1=3, 3×2=6, 3×3=9, 3×4=12, 3×5=15, 3×6=18, 3×7=21, 3×8=24, 3×9=27, 3×10=30"
+  },
+  "times table of 4": {
+    "title": "Times Table of 4",
+    "response": "4×1=4, 4×2=8, 4×3=12, 4×4=16, 4×5=20, 4×6=24, 4×7=28, 4×8=32, 4×9=36, 4×10=40"
+  },
+  "times table of 5": {
+    "title": "Times Table of 5",
+    "response": "5×1=5, 5×2=10, 5×3=15, 5×4=20, 5×5=25, 5×6=30, 5×7=35, 5×8=40, 5×9=45, 5×10=50"
+  },
+
+  "circle": {
+    "title": "Circle",
+    "response": "A circle is a plane figure where all points are the same distance from the center."
+  },
+  "square": {
+    "title": "Square",
+    "response": "A square is a rectangle with four equal sides."
+  },
+  "rectangle": {
+    "title": "Rectangle",
+    "response": "A rectangle has four right angles and opposite sides parallel."
+  },
+  "triangle": {
+    "title": "Triangle",
+    "response": "A triangle has three sides and three angles that sum to 180°."
+  },
+  "pentagon": {
+    "title": "Pentagon",
+    "response": "A pentagon has five sides and five angles."
+  },
+  "hexagon": {
+    "title": "Hexagon",
+    "response": "A hexagon has six sides and six angles."
+  },
+
+  "meter": {
+    "title": "Meter",
+    "response": "The meter is the SI unit of length."
+  },
+  "centimeter": {
+    "title": "Centimeter",
+    "response": "A centimeter is one hundredth of a meter."
+  },
+  "kilometer": {
+    "title": "Kilometer",
+    "response": "A kilometer is one thousand meters."
+  },
+  "gram": {
+    "title": "Gram",
+    "response": "The gram is a unit of mass."
+  },
+  "kilogram": {
+    "title": "Kilogram",
+    "response": "A kilogram is one thousand grams."
+  },
+  "liter": {
+    "title": "Liter",
+    "response": "The liter is a unit of volume."
+  },
+
+  "monday": {
+    "title": "Monday",
+    "response": "Monday is the first day of the week in many calendars."
+  },
+  "tuesday": {
+    "title": "Tuesday",
+    "response": "Tuesday follows Monday."
+  },
+  "wednesday": {
+    "title": "Wednesday",
+    "response": "Wednesday is the third day of the week."
+  },
+  "thursday": {
+    "title": "Thursday",
+    "response": "Thursday follows Wednesday."
+  },
+  "friday": {
+    "title": "Friday",
+    "response": "Friday is often associated with the start of the weekend."
+  },
+  "saturday": {
+    "title": "Saturday",
+    "response": "Saturday is the sixth day of the week."
+  },
+  "sunday": {
+    "title": "Sunday",
+    "response": "Sunday is traditionally a day of rest."
+  },
+
+  "january": {
+    "title": "January",
+    "response": "January is the first month of the year."
+  },
+  "february": {
+    "title": "February",
+    "response": "February is the shortest month of the year."
+  },
+  "march": {
+    "title": "March",
+    "response": "March marks the beginning of spring."
+  },
+  "april": {
+    "title": "April",
+    "response": "April has 30 days."
+  },
+  "may": {
+    "title": "May",
+    "response": "May is known for its spring flowers."
+  },
+  "june": {
+    "title": "June",
+    "response": "June ushers in summer."
+  },
+  "july": {
+    "title": "July",
+    "response": "July is one of the hottest months."
+  },
+  "august": {
+    "title": "August",
+    "response": "August is a popular vacation month."
+  },
+  "september": {
+    "title": "September",
+    "response": "September marks the return to school."
+  },
+  "october": {
+    "title": "October",
+    "response": "October is famous for autumn colors."
+  },
+  "november": {
+    "title": "November",
+    "response": "November is often rainy."
+  },
+  "december": {
+    "title": "December",
+    "response": "December features year-end holidays."
+  },
+
+  "spring": {
+    "title": "Spring",
+    "response": "Spring is the season of blooming flowers."
+  },
+  "summer": {
+    "title": "Summer",
+    "response": "Summer is the hottest season."
+  },
+  "autumn": {
+    "title": "Autumn",
+    "response": "Autumn is the season of falling leaves."
+  },
+  "winter": {
+    "title": "Winter",
+    "response": "Winter is the cold season, often with snow."
+  }
+}
